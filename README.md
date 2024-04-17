@@ -37,6 +37,11 @@ Node.js と npm を使用して簡易的な web サーバーを立てていま�
 2. \_dev ディレクトリで`npm run watch`を実行
 
 上記コマンドで自動 watch が行われ、scss・js ファイルを上書きすると自動的にコンパイル、ミニファイが実行されます。<br>
+
+- scss の場合： \_dev/src/sass/pages/\_top.scss などの scss ファイルを上書き保存する
+- javascript の場合：\_dev/src/js/page/top.js などの js ファイルを上書き保存する<br>
+  (js ファイルを追加した場合、\_dev/webpack.config.js の 98 行目付近に entry プロパティがあるので、そちらにミニファイさせたい js ファイルのパスを追加してください)
+
 もし css や javascript ファイルを直接追加したい場合や、js ライブラリなどの追加をしたい場合は下記の「ファイルの格納場所」項目を参考に追加をお願いいたします。
 
 ### Tailwindcss について
