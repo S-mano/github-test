@@ -1,0 +1,38 @@
+@use "../global" as *;
+
+// ==================================================
+// コンポーネント：リンク
+// ==================================================
+
+// 下線と矢印アイコン付きリンク
+.link-bar-bottom {
+	@media (min-width: $screen-md-min) {
+		&:hover .link-bar-bottom-line::after {
+			animation: link-bar-bottom-hover 0.3s cubic-bezier(0.66, 0, 0.34, 1) forwards;
+		}
+
+		&:not(:hover) .link-bar-bottom-line::after {
+			animation: link-bar-bottom-not-hover 0.4s cubic-bezier(0.66, 0, 0.34, 1) forwards;
+		}
+	}
+}
+
+@keyframes link-bar-bottom-hover {
+	0% {
+		left: -100%;
+	}
+
+	100% {
+		left: 0%;
+	}
+}
+
+@keyframes link-bar-bottom-not-hover {
+	0% {
+		left: 0%;
+	}
+
+	100% {
+		left: 100%;
+	}
+}

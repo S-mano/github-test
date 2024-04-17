@@ -1,0 +1,44 @@
+@use "../global" as *;
+
+// ==================================================
+// コンポーネント：テキスト
+// ==================================================
+// --------------------------------------------------
+// デフォルト
+// --------------------------------------------------
+// .text{
+//     &-xxlarge{
+//         @media(min-width:$screen-sm-min){}
+//     }
+//     &-xlarge{
+//         @media(min-width:$screen-sm-min){}
+//     }
+//     &-large{
+//         @media(min-width:$screen-sm-min){}
+//     }
+//     &-medium{
+//         @media(min-width:$screen-sm-min){}
+//     }
+//     &-small{
+//         @media(min-width:$screen-sm-min){}
+//     }
+//     &-xsmall{
+//         @media(min-width:$screen-sm-min){}
+//     }
+// }
+
+.note {
+	padding-left: 1em;
+	margin-bottom: 20px;
+	font-size: 13px;
+	line-height: 1.5;
+	text-indent: -1em;
+
+	@media (min-width: $screen-sm-min) {
+		font-size: 14px;
+	}
+
+	&::before {
+		content: "※";
+	}
+}

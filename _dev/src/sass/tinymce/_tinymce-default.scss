@@ -1,0 +1,480 @@
+@use "../global" as *;
+
+// ==================================================
+// wordpress用TinyMCEデフォルトスタイル
+// ==================================================
+
+// /* Additional default styles for the editor */
+// body {
+// 	font-family: Georgia, "Times New Roman", "Bitstream Charter", Times, serif;
+// 	font-size: 15px;
+// 	line-height: 19px;
+// 	color: #333;
+// 	margin: 10px;
+// }
+
+/* DFW mode */
+html.wp-fullscreen,
+html.wp-fullscreen body {
+	width: auto;
+	max-width: none;
+	min-height: 0;
+	overflow: hidden;
+	background: transparent;
+}
+
+.aligncenter,
+dl.aligncenter {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+.wp-caption {
+	padding-top: 4px;
+	margin: 10px 0;
+	text-align: center;
+	background-color: #f3f3f3;
+	border: 1px solid #ddd;
+}
+
+.html5-captions .wp-caption {
+	padding: 0;
+	margin: 0;
+	background-color: transparent;
+	border: none;
+}
+
+.mceIEcenter {
+	text-align: center;
+}
+
+.wp-caption img {
+	padding: 0;
+	margin: 0;
+	border: 0 none;
+}
+
+div.mceTemp {
+	user-select: element;
+}
+
+dl.wp-caption,
+dl.wp-caption * {
+	-webkit-user-drag: none;
+}
+
+.wp-caption-dd {
+	padding: 0 4px 5px;
+	margin: 0;
+	font-size: 11px;
+	line-height: 17px;
+}
+
+// pre {
+// 	font: 12px/18px Consolas, Monaco, monospace;
+// }
+
+// td {
+// 	color: #000;
+// 	font-size: 11px;
+// 	margin: 8px;
+// }
+
+/* Remove blue highlighting of selected images in WebKit */
+// img::selection {
+// 	background-color: transparent;
+// }
+
+/* Styles for the WordPress plugins */
+.mce-content-body img[data-mce-placeholder] {
+	padding: 0;
+	border-radius: 0;
+}
+
+.mce-content-body img.mce-wp-nextpage,
+.mce-content-body img.mce-wp-more {
+	display: block;
+	width: 96%;
+	height: 16px;
+	margin: 15px auto 0;
+	cursor: default;
+	border: 0;
+	outline: 0;
+	box-shadow: none;
+}
+
+.mce-content-body img.mce-wp-nextpage[data-mce-selected],
+.mce-content-body img.mce-wp-more[data-mce-selected] {
+	outline: 1px dotted #888;
+}
+
+.mce-content-body img.mce-wp-more {
+	background: transparent url("images/more.png") repeat-y scroll center center;
+}
+
+.mce-content-body img.mce-wp-nextpage {
+	background: transparent url("images/pagebreak.png") repeat-y scroll center center;
+}
+
+/* Gallery, audio, video placeholders */
+.mce-content-body img.wp-media {
+	width: 99%;
+	height: 250px;
+	cursor: pointer;
+	background-color: #f2f2f2;
+	background-repeat: no-repeat;
+	background-position: center center;
+	border: 1px solid #aaa;
+	outline: 0;
+}
+
+.mce-content-body img.wp-media:hover {
+	background-color: #ededed;
+	border-color: #777;
+}
+
+.mce-content-body img.wp-media.wp-media-selected {
+	background-color: #d8d8d8;
+	border-color: #777;
+}
+
+.mce-content-body img.wp-media.wp-gallery {
+	background-image: url("images/gallery.png");
+}
+
+/* Image resize handles */
+.mce-content-body div.mce-resizehandle {
+	width: 7px;
+	height: 7px;
+	border-color: #777;
+}
+
+.mce-content-body img[data-mce-selected] {
+	outline: 1px solid #777;
+}
+
+.mce-content-body img[data-mce-resize="false"] {
+	outline: 0;
+}
+
+audio,
+video,
+embed {
+	display: -moz-inline-stack;
+	display: inline-block;
+	max-width: 100%;
+}
+
+audio {
+	visibility: hidden;
+}
+
+/**
+ * WP Views
+ */
+
+.wpview-wrap {
+	position: relative;
+	width: 99.99%; /* All IE need hasLayout, incl. 11 (ugh, not again!!) */
+	clear: both;
+}
+
+/* delegate the handling of the selection to the wpview tinymce plugin */
+.wpview-wrap,
+.wpview-wrap * {
+	user-select: none;
+}
+
+/* hide the shortcode content, but allow the content to still be selected */
+.wpview-wrap .wpview-clipboard {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px); /* IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	border: 0;
+	outline: 0;
+}
+
+/**
+ * Media previews
+ */
+.wpview-wrap {
+	position: relative;
+	margin-bottom: 16px;
+	border: 1px solid transparent;
+}
+
+.wpview-wrap.selected {
+	background-color: rgb(0 0 0 / 10%);
+	border-color: rgb(0 0 0 / 30%);
+}
+
+.ie8 .wpview-wrap.selected,
+.ie7 .wpview-wrap.selected {
+	background-color: #e5e5e5;
+	border-color: #777;
+}
+
+.wpview-overlay {
+	position: absolute;
+	inset: 0;
+}
+
+.wpview-wrap.selected .wpview-overlay {
+	display: none;
+}
+
+.wpview-wrap .toolbar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	display: none;
+}
+
+.wpview-wrap.selected .toolbar {
+	display: block;
+}
+
+#wp-image-toolbar {
+	position: absolute;
+}
+
+.wpview-wrap .toolbar div,
+#wp-image-toolbar div {
+	width: 30px;
+	height: 30px;
+	padding: 2px;
+	margin-top: 7px;
+	margin-left: 7px;
+	font-size: 30px;
+	color: white;
+	cursor: pointer;
+	background-color: #000;
+	background-color: rgb(0 0 0 / 90%);
+	box-shadow: 0 1px 3px rgb(0 0 0 / 50%);
+}
+
+.ie8 .wpview-wrap .toolbar div,
+.ie7 .wpview-wrap .toolbar div,
+.ie8 #wp-image-toolbar div,
+.ie7 #wp-image-toolbar div {
+	display: inline;
+	padding: 0;
+}
+
+.ie8 .dashicons-edit,
+.ie7 .dashicons-edit {
+	background-image: url("images/dashicon-edit.png");
+}
+
+.ie8 .dashicons-no-alt,
+.ie7 .dashicons-no-alt {
+	background-image: url("images/dashicon-no-alt.png");
+}
+
+.wpview-error {
+	padding: 20px 0;
+	margin: 0;
+	border: 1px solid #dedede;
+}
+
+.selected .wpview-error {
+	border-color: transparent;
+}
+
+.wpview-error .dashicons {
+	display: block;
+	width: 32px;
+	height: 32px;
+	margin: 0 auto;
+	font-size: 32px;
+}
+
+.wpview-error p {
+	margin: 0;
+	font-family: "Open Sans", sans-serif;
+	text-align: center;
+}
+
+.wpview-wrap .toolbar div:hover,
+#wp-image-toolbar div:hover {
+	color: #2ea2cc;
+	background-color: #000;
+	box-shadow: 0 1px 3px rgb(0 0 0 / 80%);
+}
+
+/* Audio player is short; therefore let's put the toolbar above */
+.wpview-type-audio .toolbar {
+	top: auto;
+	bottom: -34px;
+}
+
+.wpview-type-audio .toolbar div {
+	margin-top: 0;
+}
+
+.wpview-type-audio .toolbar div:first-child {
+	margin-left: 0;
+}
+
+.wont-play {
+	padding: 4px 0;
+}
+
+.wont-play p {
+	display: block;
+	width: 70%;
+	margin: 0 15%;
+	font-size: 13px;
+	line-height: 1.3;
+	text-align: center;
+}
+
+.wpview-type-gallery::after {
+	display: table;
+	clear: both;
+	content: "";
+}
+
+.gallery img[data-mce-selected]:focus {
+	outline: none;
+}
+
+.gallery a {
+	cursor: default;
+}
+
+.gallery {
+	padding: 6px 0;
+	margin: auto -6px;
+	overflow-x: hidden;
+	line-height: 1;
+}
+
+.ie7 .gallery,
+.ie8 .gallery {
+	margin: auto;
+}
+
+.gallery .gallery-item {
+	box-sizing: border-box;
+	float: left;
+	padding: 6px;
+	margin: 0;
+	text-align: center;
+}
+
+.ie7 .gallery .gallery-item,
+.ie8 .gallery .gallery-item {
+	padding: 6px 0;
+}
+
+.gallery .gallery-caption,
+.gallery .gallery-icon {
+	margin: 0;
+}
+
+.gallery .gallery-caption {
+	margin: 4px 0;
+	font-size: 13px;
+}
+
+.gallery-columns-1 .gallery-item {
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	width: 33.333%;
+}
+
+.ie8 .gallery-columns-3 .gallery-item,
+.ie7 .gallery-columns-3 .gallery-item {
+	width: 33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	width: 16.665%;
+}
+
+.gallery-columns-7 .gallery-item {
+	width: 14.285%;
+}
+
+.gallery-columns-8 .gallery-item {
+	width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	width: 11.111%;
+}
+
+.gallery img {
+	max-width: 100%;
+	height: auto;
+	padding: 0;
+	border: none;
+}
+
+img.wp-oembed {
+	width: 300px;
+	height: 250px;
+	background: #f7f5f2 url("images/embedded.png") no-repeat scroll center center;
+	border: 1px dashed #888;
+	outline: 0;
+}
+
+/* rtl */
+.rtl .gallery .gallery-item {
+	float: right;
+}
+
+.rtl .wpview-wrap .toolbar {
+	right: 0;
+	left: auto;
+}
+
+.rtl .wpview-wrap .toolbar div,
+.rtl #wp-image-toolbar div {
+	margin-right: 7px;
+	margin-left: auto;
+}
+
+@media print, (minpixel-ratio: 5 / 4), (min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+	.mce-content-body img.mce-wp-more {
+		background-image: url("images/more-2x.png");
+		background-size: 1900px 20px;
+	}
+
+	.mce-content-body img.mce-wp-nextpage {
+		background-image: url("images/pagebreak-2x.png");
+		background-size: 1900px 20px;
+	}
+}

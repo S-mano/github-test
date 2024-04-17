@@ -1,0 +1,44 @@
+@use "../global" as *;
+
+// ボタン用スタイル
+// クラス名：.button-xxx
+
+// --------------------------------------------------
+// ボタンジェネレーター
+// --------------------------------------------------
+// ベース
+%button-base {
+	display: inline-block;
+	padding: 5px;
+	line-height: 1.25;
+	text-align: center;
+}
+
+@mixin button-base-generator($bg-color, $color, $bg-hover) {
+	@extend %button-base;
+
+	color: $color;
+	background-color: $bg-color;
+
+	&:focus,
+	&:active,
+	&:hover {
+		color: $color;
+	}
+
+	@media (min-width: $screen-md-min) {
+		transition: 0.3s;
+
+		&:hover {
+			background-color: $bg-hover;
+			border-color: $border-hover;
+			opacity: 1;
+			transition: 0.3s;
+		}
+	}
+}
+
+// 出力
+// .button-size-color {
+//     @include button-base-generator($backgrond_color-blue, $text_color-white);
+// }

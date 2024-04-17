@@ -1,0 +1,19 @@
+@use "../global" as *;
+
+:root {
+	--color-dark: #141010;
+	--color-dark-gray: #1e1c1c;
+	--color-gray: #767070;
+	--color-medium-gray: #d9d9d9;
+	--color-light-gray: #f3f3f3;
+	--color-red: #d60001;
+	--color-pale-red: #eac2c2;
+	--color-dark-red: #970304;
+	--color-white: #fff;
+	--sp-header-height: 3.5rem;
+	--sp-cta-height: 4rem;
+	--z-index-header: 99;
+	--ease-inout-cubic: cubic-bezier(0.65, 0, 0.35, 1);
+	--ease-in-cubic: cubic-bezier(0.32, 0, 0.67, 0);
+	--ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);
+}

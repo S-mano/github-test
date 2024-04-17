@@ -1,0 +1,49 @@
+@use "../global" as *;
+
+// ==================================================
+// コンポーネント：ラッパー
+// ==================================================
+// --------------------------------------------------
+// 基本ラッパー
+// --------------------------------------------------
+.wrap-xs {
+	max-width: $screen-xs-min;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.wrap-sm {
+	max-width: $screen-sm-min;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.wrap-md {
+	max-width: $screen-md-min;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.wrap-lg {
+	max-width: $screen-lg-min;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+// コンテンツ基本幅
+.wrap-content {
+	max-width: 1010px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+// 各コンテンツ幅
+// .wrap-content-1100 {
+// 	max-width: 1130px;
+// 	margin-left: auto;
+// 	margin-right: auto;
+// 	padding-left: 15px;
+// 	padding-right: 15px;
+// }

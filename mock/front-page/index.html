@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>シンバHD TOPページモック</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="107">
+	<!-- Twitter Cards -->
+	<meta name="twitter:card" content="summary_large_image">
+	<!-- og -->
+	<meta property='og:type' content='website'>
+	<meta property='og:title' content='wordpress'>
+	<meta property='og:image' content=''>
+	<meta property="og:url" content="http://symba_v2.localhost">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0,user-scalable=yes">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="icon" href="/favicon.ico">
+	<link rel="preload" href="/common/css/common.min.css" as="style">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300..700&family=Akshar:wght@300..700&display=swap"
+		rel="stylesheet">
+
+	<link rel="stylesheet" href="/common/css/common.min.css">
+
+	<!-- IE11 polyfill -->
+	<script async="" src="/common/lib/picturefill/picturefill.min.js"></script>
+
+	<meta name='robots' content='max-image-preview:large' />
+
+	<!-- web font loader-->
+	<!-- <script defer>
+      window.WebFontConfig = {
+        google: {families: ['Roboto:400,700','Noto+Sans+JP:400,700']},
+        active: function () {
+          sessionStorage.fonts = true;
+        }
+      };
+
+      (function () {
+        var wf = document.createElement('script');
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+        wf.type = 'text/javascript';
+        wf.defer = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script> -->
+</head>
+
+
+<body id="body" class="is-pc is-top">
+	<header
+		class="js-header [:where(&)_a]:tw-text-current tw-fixed tw-grid tw-w-full [&_a]:tw-no-underline [&_ul]:tw-list-none [&_img]:tw-block [&_img]:tw-h-auto tw-z-[--z-index-header] tw-min-w-320ptr tw-bg-white">
+		<nav
+			class="tw-relative tw-grid tw-grid-flow-col tw-items-center tw-self-center md:tw-h-100ptr tw-h-[--sp-header-height] ~md:tw-~gap-24ptr/40ptr [grid-template:'logo_hamburger'/auto_1fr] md:[grid-template:'logo_menu'/auto_1fr]">
+			<a href="/" class="tw-inline-block ~md:tw-~px-24ptr/40ptr ~md:tw-~py-18ptr/35ptr md:[grid-area:logo]">
+				<img class="~md:tw-~w-189ptr/284ptr" src="../../common/images/share/icon/icon_logo.svg"
+					alt="SYMBA HOLDINGS" width="284" height="30" />
+			</a>
+			<div id="drawer"
+				class="js-navigation-menu maxMd:[&.is-active_>ul]:tw-fade-visible tw-invisible tw-fixed tw-right-0 tw-grid tw-w-full tw-translate-x-full tw-overflow-y-auto tw-bg-black tw-p-24ptr tw-text-white tw-transition-all tw-duration-300 md:tw-visible md:tw-static md:tw-translate-x-0 md:tw-grid-flow-col md:tw-items-center md:tw-justify-self-end md:tw-overflow-y-visible md:tw-bg-transparent md:tw-p-0 md:tw-text-black [&.is-active]:tw-visible [&.is-active]:tw-translate-x-0 tw-top-[--sp-header-height] tw-h-[calc(100%-var(--sp-header-height)-var(--sp-cta-height))] ~md:tw-~gap-24ptr/40ptr md:tw-size-auto md:tw-grid-cols-[max-content] [grid-area:menu]">
+				<ul
+					class="maxMd:tw-fade-invisible tw-grid md:tw-items-center tw-auto-rows-max md:tw-grid-flow-col md:tw-justify-start [&_>li]:tw-border-b [&_>li]:tw-border-solid [&_>li]:tw-py-16ptr md:[&_>li]:tw-border-0 md:[&_>li]:tw-py-0 [&_li]:tw-relative ~md:tw-~text-18ptr/20ptr md:tw-gap-[min(calc(56*100/1920*1vw),56px)] [&_>li]:tw-border-[#595858] [--transition-delay:0.3s]">
+					<!-- NOTE:is-activeをつけるとカレントページのスタイリングが表示されます。 -->
+					<li
+						class="is-active [&.is-active]:md:after:tw-bg-red [&.is-active]:md:after:tw-absolute [&.is-active]:md:after:tw-left-1/2 [&.is-active]:md:after:tw-inline-block after:tw-content-[''] [&.is-active]:md:after:tw--translate-x-1/2 [&.is-active]:md:after:tw-rounded-full [&.is-active]:md:after:tw-top-[calc(100%+theme('spacing.2'))] [&.is-active]:md:after:tw-size-2">
+						<a href="/" class="tw-group">
+							<span class="tw-overflow-hidden">
+								<span
+									class="tw-invisible tw-absolute tw-inset-0 tw-left-1/2 tw-inline-flex tw-w-max tw-items-center tw-justify-center tw-text-center tw-font-bold tw-opacity-0 tw-transition-all tw-duration-300 group-hover:md:tw-visible group-hover:md:tw-opacity-100 ~md:tw-~text-12ptr/16ptr [transform:translate3d(0,120%,0)_translateX(-50%)] group-hover:md:[transform:translate3d(0,0,0)_translateX(-50%)]">
+									シンバネットワーク
+								</span>
+								<span lang="en"
+									class="tw-flex tw-w-full tw-items-baseline tw-justify-between tw-font-normal tw-tracking-normal tw-opacity-100 tw-transition-all tw-duration-300 after:tw-bg-white group-hover:md:tw-opacity-0 after:tw-h-8ptr after:tw-w-10ptr after:tw-mask-icon md:tw-content-none md:after:tw-content-none [--mask-icon:url('../../common/images/share/icon/icon_arrow-right.svg')] [transform:translate3d(0,0,0)] group-hover:md:[transform:translate3d(0,-120%,0)]"
+									aria-hidden="true">
+									SYMBA NETWORK
+								</span>
+							</span>
+						</a>
+					</li>
+					<li
+						class="[&.is-active]:md:after:tw-bg-red [&.is-active]:md:after:tw-absolute [&.is-active]:md:after:tw-left-1/2 [&.is-active]:md:after:tw-inline-block after:tw-content-[''] [&.is-active]:md:after:tw--translate-x-1/2 [&.is-active]:md:after:tw-rounded-full [&.is-active]:md:after:tw-top-[calc(100%+theme('spacing.2'))] [&.is-active]:md:after:tw-size-2">
+						<a href="/" class="tw-group">
+							<span class="tw-overflow-hidden">
+								<span
+									class="tw-invisible tw-absolute tw-inset-0 tw-left-1/2 tw-inline-flex tw-w-max tw-items-center tw-justify-center tw-text-center tw-font-bold tw-opacity-0 tw-transition-all tw-duration-300 group-hover:md:tw-visible group-hover:md:tw-opacity-100 ~md:tw-~text-12ptr/16ptr [transform:translate3d(0,120%,0)_translateX(-50%)] group-hover:md:[transform:translate3d(0,0,0)_translateX(-50%)]">
+									ソリューション
+								</span>
+								<span lang="en"
+									class="tw-flex tw-w-full tw-items-baseline tw-justify-between tw-font-normal tw-tracking-normal tw-opacity-100 tw-transition-all tw-duration-300 after:tw-bg-white group-hover:md:tw-opacity-0 after:tw-h-8ptr after:tw-w-10ptr after:tw-mask-icon md:tw-content-none md:after:tw-content-none [--mask-icon:url('../../common/images/share/icon/icon_arrow-right.svg')] [transform:translate3d(0,0,0)] group-hover:md:[transform:translate3d(0,-120%,0)]"
+									aria-hidden="true">
+									SOLUTION
+								</span>
+							</span>
+						</a>
+					</li>
+					<li
+						class="[&.is-active]:md:after:tw-bg-red [&.is-active]:md:after:tw-absolute [&.is-active]:md:after:tw-left-1/2 [&.is-active]:md:after:tw-inline-block after:tw-content-[''] [&.is-active]:md:after:tw--translate-x-1/2 [&.is-active]:md:after:tw-rounded-full [&.is-active]:md:after:tw-top-[calc(100%+theme('spacing.2'))] [&.is-active]:md:after:tw-size-2">
+						<button class="js-drop-down tw-hidden tw-w-full md:tw-inline-block tw-group">
+							<span class="tw-overflow-hidden">
+								<span
+									class="tw-invisible tw-absolute t w-inset-0 tw-left-1/2 tw-inline-flex tw-w-max tw-items-baseline tw-gap-2 tw-text-center tw-font-bold tw-opacity-0 tw-transition-all tw-duration-300 after:tw-content-[''] after:tw-h-12ptr after:tw-w-10ptr after:tw-bg-black group-hover:md:tw-visible group-hover:md:tw-opacity-100 after:tw-mask-icon ~md:tw-~text-12ptr/16ptr [transform:translate3d(0,120%,0)_translateX(-50%)] [--mask-icon:url('../../common/images/share/icon/icon_arrow-down.svg')] group-hover:md:[transform:translate3d(0,0,0)_translateX(-50%)]">
+									会社概要
+								</span>
+								<span lang="en"
+									class="tw-flex tw-w-full tw-items-baseline tw-justify-between tw-gap-2 tw-font-normal tw-tracking-normal tw-opacity-100 tw-transition-all tw-duration-300 after:tw-h-12ptr after:tw-w-10ptr after:tw-bg-black group-hover:md:tw-opacity-0 after:tw-content-none after:tw-mask-icon after:md:tw-content-[''] [transform:translate3d(0,0,0)] [--mask-icon:url('../../common/images/share/icon/icon_arrow-down.svg')] group-hover:md:[transform:translate3d(0,-120%,0)]"
+									aria-hidden="true">
+									COMPANY
+								</span>
+							</span>
+						</button>
+						<ul
+							class="js-sub-menu [&.is-active]:tw-fade-visible md:tw-fade-invisible md:tw-bg-dark-gray tw-text-white md:tw-absolute md:tw-w-max md:tw-p-24ptr md:tw-left-[calc(24px-1em)] md:tw-top-[calc(100%+16px)] md:[--transformY:-10px]">
+							<li
+								class="tw-font-normal tw-tracking-normal md:tw-border-b tw-border-solid md:tw-pb-24ptr md:tw-border-[#595858] md:tw-text-20ptr">
+								<a href="/" lang="en" class="tw-flex tw-items-center tw-justify-between tw-group">
+									COMPANY
+									<span
+										class="tw-inline-grid tw-place-items-center tw-rounded-full data-[size='small']:tw-size-16ptr data-[bg-color='white']:tw-bg-white"
+										data-size="small" data-bg-color="white">
+										<span
+											class="tw-h-6ptr tw-w-8ptr tw-mask-icon tw-transition-transform tw-duration-300 group-hover:tw-translate-x-1 data-[arrow-color='black']:tw-bg-black [--mask-icon:url('../../common/images/share/icon/icon_arrow-right.svg')]"
+											data-arrow-color="black"></span>
+									</span>
+								</a>
+							</li>
+							<li class="tw-mt-20ptr md:tw-mt-24ptr">
+								<ul
+									class="tw-ml-16ptr tw-space-y-2 md:tw-ml-0 md:tw-space-y-4 [&_li_a]:tw-flex [&_li_a]:tw-items-center [&_li_a]:tw-justify-between [&_li_a]:tw-gap-14ptr [&_li_a]:tw-tracking-wide [&_li_a]:after:tw-bg-white [&_li_a]:after:tw-content-[''] [&_li_a]:after:tw-transition-all [&_li_a]:after:tw-duration-300 [&_li_a]:after:tw-h-8ptr [&_li_a]:after:tw-w-10ptr [&_li_a]:after:tw-mask-icon [&_li_a]:tw-text-14ptr [--mask-icon:url('../../common/images/share/icon/icon_arrow-right.svg')]">
+									<li class="tw-font-medium md:tw-font-normal">
+										<a class=" tw-trasnsition-all tw-duration-300 hover:tw-text-gray hover:after:tw-bg-gray"
+											href="/">CEOメッセージ</a>
+									</li>
+									<li class="tw-font-medium md:tw-font-normal">
+										<a class=" tw-trasnsition-all tw-duration-300 hover:tw-text-gray hover:after:tw-bg-gray"
+											href="/">COOメッセージ</a>
+									</li>
+									<li class="tw-font-medium md:tw-font-normal">
+										<a class="tw-trasnsition-all tw-duration-300 hover:tw-text-gray hover:after:tw-bg-gray"
+											href="/">会社組織・役員一覧</a>
+									</li>
+									<li class="tw-font-medium md:tw-font-normal">
+										<a class=" tw-trasnsition-all tw-duration-300 hover:tw-text-gray hover:after:tw-bg-gray"
+											href="/">創業ヒストリー</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li
+						class="[&.is-active]:md:after:tw-bg-red [&.is-active]:md:after:tw-absolute [&.is-active]:md:after:tw-left-1/2 [&.is-active]:md:after:tw-inline-block after:tw-content-[''] [&.is-active]:md:after:tw--translate-x-1/2 [&.is-active]:md:after:tw-rounded-full [&.is-active]:md:after:tw-top-[calc(100%+theme('spacing.2'))] [&.is-active]:md:after:tw-size-2">
+						<a href="/" class="tw-group">
+							<span class="tw-overflow-hidden">
+								<span
+									class="tw-invisible tw-absolute tw-inset-0 tw-left-1/2 tw-inline-flex tw-w-max tw-items-center tw-justify-center tw-text-center tw-font-bold tw-opacity-0 tw-transition-all tw-duration-300 group-hover:md:tw-visible group-hover:md:tw-opacity-100 ~md:tw-~text-12ptr/16ptr [transform:translate3d(0,120%,0)_translateX(-50%)] group-hover:md:[transform:translate3d(0,0,0)_translateX(-50%)]">
+									ニュース
+								</span>
+								<span lang="en"
+									class="tw-flex tw-w-full tw-items-baseline tw-justify-between tw-font-normal tw-tracking-normal tw-opacity-100 tw-transition-all tw-duration-300 after:tw-bg-white group-hover:md:tw-opacity-0 after:tw-h-8ptr after:tw-w-10ptr md:tw-content-none md:after:tw-content-none after:tw-mask-icon [--mask-icon:url('../../common/images/share/icon/icon_arrow-right.svg')] [transform:translate3d(0,0,0)] group-hover:md:[transform:translate3d(0,-120%,0)]"
+									aria-hidden="true">
+									NEWS
+								</span>
+							</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<ul class="tw-fixed tw-bottom-0 tw-left-0 tw-grid tw-w-full tw-grid-flow-col md:tw-static tw-min-w-320ptr">
+				<li>
+					<a href="/" role="button"
+						class="tw-relative tw-grid tw-w-full tw-place-content-center tw-place-items-center before:tw-absolute before:tw-h-full before:tw-w-full before:tw-scale-x-0 before:tw-transition-transform before:tw-duration-200 before:tw-ease-[--ease-out-cubic] hover:before:tw-scale-x-100 hover:before:tw-ease-[--ease-inout-cubic] hover:before:tw-duration-150 md:tw-h-100ptr md:tw-px-51ptr md:tw-py-25ptr tw-z-[1] tw-h-[--sp-cta-height] tw-grid-rows-[repeat(2,min-content)] tw-py-[0.78125rem] tw-text-[--color-white] before:tw-left-[0] before:tw-top-[0] before:tw-z-[-1] before:tw-origin-[100%_50%] before:tw-content-[''] hover:before:tw-origin-[0%_50%] data-[button='dark-gray']:tw-bg-[--color-dark-gray] data-[button='red']:tw-bg-[--color-red] data-[button='dark-gray']:before:tw-bg-[--color-gray] data-[button='red']:before:tw-bg-[--color-dark-red] md:~md:tw-~w-160ptr/200ptr"
+						data-button="dark-gray">
+						<span class="tw-tracking-medium tw-font-normal tw-leading-[1.083333] ~md:tw-~text-18ptr/24ptr"
+							lang="en">CONTACT</span>
+						<span class="tw-tracking-wider ~md:tw-~text-12ptr/16ptr">お問合せ</span>
+					</a>
+				</li>
+				<li>
+					<a href="/" role="button"
+						class="tw-relative tw-grid tw-w-full tw-place-content-center tw-place-items-center before:tw-absolute before:tw-h-full before:tw-w-full before:tw-scale-x-0 before:tw-transition-transform before:tw-duration-200 before:tw-ease-[--ease-out-cubic] hover:before:tw-scale-x-100 hover:before:tw-ease-[--ease-inout-cubic] hover:before:tw-duration-150 md:tw-h-100ptr md:tw-px-51ptr md:tw-py-25ptr tw-z-[1] tw-h-[--sp-cta-height] tw-grid-rows-[repeat(2,min-content)] tw-py-[0.78125rem] tw-text-[--color-white] before:tw-left-[0] before:tw-top-[0] before:tw-z-[-1] before:tw-origin-[100%_50%] before:tw-content-[''] hover:before:tw-origin-[0%_50%] data-[button='dark-gray']:tw-bg-[--color-dark-gray] data-[button='red']:tw-bg-[--color-red] data-[button='dark-gray']:before:tw-bg-[--color-gray] data-[button='red']:before:tw-bg-[--color-dark-red] md:~md:tw-~w-160ptr/200ptr"
+						data-button="red">
+						<span lang="en"
+							class="tw-tracking-medium tw-font-normal tw-leading-[1.083333] ~md:tw-~text-18ptr/24ptr">RECRUIT</span>
+						<span class="tw-tracking-wider ~md:tw-~text-12ptr/16ptr">採用情報</span>
+					</a>
+				</li>
+			</ul>
+			<div
+				class="tw-grid tw-h-full tw-w-80ptr tw-place-items-center tw-justify-self-end md:tw-hidden [grid-area:hamburger]">
+				<button class="js-hamburger tw-relative tw-z-20 tw-block tw-w-25ptr tw-group tw-h-[0.78125rem]"
+					type="button" aria-expanded="false" aria-controls="drawer" aria-label="メニューを開く">
+					<span
+						class="tw-absolute tw-left-0 tw-top-px tw-w-full tw-bg-black tw-transition-all tw-duration-300 group-aria-expanded:tw--rotate-45 tw-h-[3px] group-aria-expanded:tw-top-[calc(0.78125rem/2)] [transition:.3s_.35s_ease,transform_.3s_.05s_ease] group-aria-expanded:[transition:top_.3s_.05s_ease,transform_.3s_.35s_ease]"></span>
+					<span
+						class="tw-absolute tw-left-0 tw-w-full tw-bg-black tw-transition-all tw-duration-300 group-aria-expanded:tw-rotate-45 tw-top-[calc(100%-3px)] tw-h-[3px] group-aria-expanded:tw-top-[calc(0.78125rem/2)] [transition:.3s_.35s_ease,transform_.3s_.05s_ease] group-aria-expanded:[transition:top_.3s_.05s_ease,transform_.3s_.35s_ease]"></span>
+				</button>
+			</div>
+		</nav>
+	</header>
+
+
+	<main class="tw-bg-white">
+
+		<!-- KVと企業メッセージ -->
+		<section>
+			<!-- KV -->
+			<div class="tw-relative">
+				<div class="tw-mx-auto tw-w-full tw-h-300ptr md:tw-h-1050ptr">
+					<div class="tw-absolute tw-top-[56px] md:tw-top-[100px] tw-bg-center tw-bg-cover tw-bg-no-repeat tw-h-300ptr  md:tw-h-1300ptr tw-object-cover tw-w-full"
+						style="background-image: url('/common/video/mock/top-kv-animation.gif');">
+					</div>
+				</div>
+			</div>
+
+			<!-- 企業メッセージ -->
+			<div
+				class="tw-box-content tw-relative tw-mx-auto tw-px-6 md:tw-px-10 tw-pb-56ptr md:tw-pb-66ptr tw-max-w-1000ptr js-scroll-animation">
+				<h2 class="l-top-message-heading tw-inline-flex tw-flex-col sm:tw-flex-row tw-mb-8 md:tw-mb-10 tw-text-40ptr md:tw-text-70ptr tw-text-gray tw-font-light"
+					lang="en">
+					<span>Challenge</span>
+					<span class="md:tw-ml-4">for the Future</span>
+				</h2>
+
+				<div class="tw-mb-8 md:tw-mb-20 tw-text-[18px] md:tw-text-xl">
+					<div class="l-top-message-paragraph tw-inline js-scroll-animation">
+						<div class="js-kv-message-paragraph">
+							<p class="tw-inline md:tw-inline-block tw-leading-[2] md:tw-leading-loose">
+								わたしたちは、1965年より物流事業から産声をあげ、
+							</p><br class="tw-hidden md:tw-block">
+							<p class="tw-inline md:tw-inline-block tw-leading-[2] md:tw-leading-loose">
+								創業から、時代の流れに沿い、
+							</p><br class="tw-hidden md:tw-block">
+							<p class="tw-inline md:tw-inline-block tw-leading-[2] md:tw-leading-loose">
+								沖縄に根ざしたビジネスを展開してまいりました。
+							</p><br class="tw-hidden md:tw-block">
+						</div>
+						<div class="js-kv-message-paragraph">
+							<p class="tw-inline md:tw-inline-block tw-leading-[2] md:tw-leading-loose">
+								現在では、「物流」、「情報」、「観光」をはじめとする
+							</p><br class="tw-hidden md:tw-block">
+							<p class="tw-inline md:tw-inline-block tw-leading-[2] md:tw-leading-loose">
+								グループ全体のネットワークのシナジーを活かした
+							</p><br class="tw-hidden md:tw-block">
+							<p class="tw-inline md:tw-inline-block tw-leading-[2] md:tw-leading-loose">
+								トータルソリューションであらゆるビジネスを支援しています。
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- リンク -->
+				<div class="tw-inline-flex tw-justify-end md:tw-justify-start tw-w-full tw-overflow-hidden">
+					<a class="link-bar-bottom tw-group tw-flex tw-flex-col tw-text-black" href="/">
+						<div class="tw-relative tw-hidden md:tw-flex tw-gap-x-16ptr tw-text-40ptr tw-font-light tw-leading-normal after:tw-content-[''] after:tw-relative after:tw-block after:tw-top-[47%] after:tw--translate-y-1/2 after:tw-w-29ptr after:tw-h-29ptr after:tw-bg-black after:tw-rounded-[50%]"
+							lang="en">
+							<span>SYMBA NETWORK</span>
+							<span
+								class="tw-mask-icon [--mask-icon:url('../../common/images/share/icon/icon_arrow-right.svg')] tw-absolute tw-right-[10px] tw-top-[47%] tw--translate-y-1/2 tw-w-10ptr tw-h-8ptr tw-bg-white [transition:right_.3s] tw-z-[1] group-hover:tw-right-[4px]"></span>
+						</div>
+						<div class="tw-relative tw-flex tw-gap-x-16ptr tw-pt-1ptr tw-text-15ptr md:tw-text-16ptr tw-font-light tw-leading-normal after:tw-content-[''] after:tw-relative after:tw-block md:after:tw-hidden after:tw-top-[47%] after:tw--translate-y-1/2 after:tw-w-24ptr after:tw-h-24ptr after:tw-bg-black after:tw-rounded-[50%]"
+							lang="en">
+							<span>シンバネットワークについて</span>
+							<span
+								class="tw-mask-icon [--mask-icon:url('../../common/images/share/icon/icon_arrow-right.svg')] tw-hidden md:tw-inline-block tw-absolute tw-right-[8px] tw-top-[47%] tw--translate-y-1/2 tw-w-8ptr tw-h-6ptr tw-bg-white tw-z-[1]"></span>
+						</div>
+						<span
+							class="link-bar-bottom-line tw-relative  tw-pt-23ptr md:tw-pt-30ptr tw-overflow-hidden before:tw-content-[''] before:tw-absolute before:tw-bottom-0 before:tw-left-0 before:tw-block before:tw-w-full before:tw-h-2ptr before:tw-z-0 before:tw-bg-gray after:tw-content-[''] after:tw-absolute after:tw-bottom-0 after:tw-left-neg-100 after:tw-block after:tw-w-full after:tw-h-2ptr after:tw-z-[1] after:tw-bg-red"></span>
+
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- 企業紹介youtube -->
+		<div class="l-top-branding-movie">
+
+			<div
+				class="tw-grid tw-max-w-1200ptr tw-box-content tw-mx-auto tw-px-4 md:tw-px-10 tw-py-14 md:tw-pt-10 md:tw-pb-20 l-top-branding-movie-inner  tw-relative">
+				<div class="js-neer-wing l-top-neer-wing-static-image tw-absolute tw-left-0" data-area="movie"></div>
+				<div
+					class="js-play-button-box l-top-branding-movie-overlay [grid-row:1] [grid-column:1/-1]  tw-transition-all tw-duration-300">
+					<div class="tw-relative tw-z-10 tw-place-self-center tw-text-white">
+						<button
+							class="js-play-button tw-grid tw-size-34ptr tw-place-items-center tw-rounded-full tw-border tw-border-solid tw-border-white tw-bg-transparent tw-text-current sm:tw-size-134ptr before:tw-content-[''] before:tw-w-9ptr before:tw-h-12ptr before:[background-image:url('../../common/images/share/icon/icon_play-arrow.svg')] before:tw-bg-no-repeat before:tw-bg-contain before:tw-translate-x-[0.125rem] sm:before:tw-translate-x-[0.3125rem] sm:before:tw-w-30ptr sm:before:tw-h-41ptr"
+							aria-label="再生する">
+							<span
+								class="text-14ptr tw-absolute tw-bottom-0 tw-mb-[-1.6875rem] sm:tw-mb-[-3.8125rem] tw-left-1/2 tw-w-max -tw-translate-x-1/2 tw-text-current tw-leading-[1.1] tw-font-light sm:tw-text-40ptr"
+								lang="en">
+								PLAY MOVIE
+							</span>
+						</button>
+					</div>
+				</div>
+				<div class="[grid-row:1] [grid-column:1/-1]">
+					<video id="js-video"
+						class="video-js aspect-video tw-h-full tw-w-full [#js-video&_.vjs-big-play-button]:tw-hidden">
+						<source src="/common/video/top-symba.mp4" type="video/mp4" />
+					</video>
+				</div>
+			</div>
+		</div>
+
+		<!-- ソリューション -->
+		<section
+			class="tw-box-content tw-mx-auto tw-py-56ptr md:tw-pt-120ptr md:tw-pb-7.5 tw-relative tw-overflow-hidden">
+			<div class="js-far-wing l-top-far-wing-static-image tw-absolute tw-left-0" data-area="solution"></div>
+			<div
+				class="tw-box-content tw-flex tw-flex-col md:tw-flex-row tw-gap-x-16 tw-gap-y-8 tw-mx-auto tw-mb-32ptr md:tw-mb-120ptr tw-px-6 md:tw-px-10 tw-max-w-1236ptr tw-relative tw-z-[2]">
+				<h2 class="tw-flex tw-flex-col tw-relative slash">
+					<span class="tw-text-80ptr md:tw-text-120ptr tw-font-light tw-leading-[1.1]" lang="en"
+						aria-hidden="true">
+						SOLUTION
+					</span>
+					<span
+						class="tw-font-medium tw-text-15ptr md:tw-text-16ptr tw-tracking-wider tw-inline-flex
+			tw-gap-2 tw-items-center before:tw-content-[''] before:tw-mt-2ptr before:tw-inline-block before:tw-size-2 before:tw-rotate-45 before:tw-bg-red md:before:tw-mt-0">
+						ソリューション
+					</span>
+				</h2>
+				<p class="md:tw-pt-40ptr tw-text-16ptr md:tw-text-18ptr tw-leading-relaxed tw-font-normal">
+					｢沖縄の企業と取引をしたい｣｢沖縄から商材を仕入れたい｣｢沖縄で出店をしたい｣｢沖縄から出荷や輸出をしたい｣等のニーズにお応えする、ワンストップソリューションを提供しています。
+				</p>
+			</div>
+
+			<!-- シンバネットワーク -->
+			<div
+				class="l-top-solution tw-mx-auto tw-mb-28ptr md:tw-mb-70ptr tw-px-4 md:tw-px-10 tw-max-w-1200ptr js-scroll-animation">
+				<picture>
+					<source srcset="/common/images/mock/solution_network_pc.png" media="(min-width: 768px)">
+					<img src="/common/images/mock/solution_network_sp.png" alt="" class="tw-w-full">
+				</picture>
+			</div>
+
+			<!-- データ -->
+			<div class="tw-box-content tw-flex tw-justify-center tw-mx-auto tw-px-6 md:tw-px-10 tw-max-w-1200ptr">
+				<ul
+					class="tw-inline-flex tw-flex-col md:tw-flex-row tw-flex-wrap tw-justify-center tw-gap-32ptr md:tw-gap-40ptr tw-pt-14 tw-pb-10 md:tw-w-full first-letter:md:tw-pt-10 md:tw-pb-12">
+					<li class="l-top-solution-data-item tw-flex-grow-0 sm:tw-flex-grow js-scroll-animation-count-up">
+						<span
+							class="tw-inline-block tw-mb-17ptr md:tw-mb-20ptr tw-text-red tw-text-15ptr md:tw-text-18ptr font-normal tw-tracking-[1.8px]">社員数社員</span>
+						<div
+							class="tw-flex tw-flex-wrap tw-justify-between md:tw-justify-normal tw-items-center tw-gap-y-24ptr tw-ml-18ptr md:tw-ml-0 tw-text-red tw-font-semibold">
+							<div class="tw-flex">
+								<img src="/common/images/share/icon/icon_solution-data.svg" alt="社員数社員アイコン"
+									class="tw-flex tw-items-center tw-w-60ptr md:tw-w-80ptr tw-h-60ptr md:tw-h-80ptr">
+								<span
+									class="tw-flex tw-items-center tw-justify-center tw-w-48ptr xxs:tw-w-88ptr md:tw-w-60ptr tw-h-60ptr md:tw-h-80ptr after:tw-content-['']  after:tw-rotate-[120deg] after:tw-inline-block after:tw-w-[20vw] after:tw-max-w-80ptr after:md:tw-min-w-120ptr after:md:tw-max-w-none after:tw-h-1ptr after:tw-bg-red"></span>
+							</div>
+							<div class="tw-flex tw-flex-wrap tw-items-end tw-gap-x-4ptr tw-gap-y-16ptr">
+								<span lang="en"
+									class="tw-text-64ptr md:tw-text-80ptr tw-font-light tw-leading-[0.5] js-count-up-target"
+									data-num="3000">3000</span>
+								<span class="tw-text-24ptr tw-font-semibold tw-text-red tw-leading-none">人</span>
+							</div>
+						</div>
+					</li>
+					<li class="l-top-solution-data-item tw-flex-grow-0 sm:tw-flex-grow js-scroll-animation-count-up">
+						<span
+							class="tw-inline-block tw-mb-17ptr md:tw-mb-20ptr tw-text-red tw-text-15ptr md:tw-text-18ptr font-normal tw-tracking-[1.8px]">社員数社員</span>
+						<div
+							class="tw-flex tw-flex-wrap tw-justify-between md:tw-justify-normal tw-items-center tw-gap-y-24ptr tw-ml-18ptr md:tw-ml-0 tw-text-red tw-font-semibold">
+							<div class="tw-flex">
+								<img src="/common/images/share/icon/icon_solution-data.svg" alt="社員数社員アイコン"
+									class="tw-flex tw-items-center tw-w-60ptr md:tw-w-80ptr tw-h-60ptr md:tw-h-80ptr">
+								<span
+									class="tw-flex tw-items-center tw-justify-center tw-w-48ptr xxs:tw-w-88ptr md:tw-w-60ptr tw-h-60ptr md:tw-h-80ptr after:tw-content-['']  after:tw-rotate-[120deg] after:tw-inline-block after:tw-w-[20vw] after:tw-max-w-80ptr after:md:tw-min-w-120ptr after:md:tw-max-w-none after:tw-h-1ptr after:tw-bg-red"></span>
+							</div>
+							<div class="tw-flex tw-flex-wrap tw-items-end tw-gap-x-4ptr tw-gap-y-16ptr">
+								<span lang="en"
+									class="tw-text-64ptr md:tw-text-80ptr tw-font-light tw-leading-[0.5] js-count-up-target"
+									data-num="100">100</span>
+								<span class="tw-text-24ptr tw-font-semibold tw-text-red tw-leading-none">人</span>
+							</div>
+						</div>
+					</li>
+					<li class="l-top-solution-data-item tw-flex-grow-0 sm:tw-flex-grow js-scroll-animation-count-up">
+						<span
+							class="tw-inline-block tw-mb-17ptr md:tw-mb-20ptr tw-text-red tw-text-15ptr md:tw-text-18ptr font-normal tw-tracking-[1.8px]">社員数社員</span>
+						<div
+							class="tw-flex tw-flex-wrap tw-justify-between md:tw-justify-normal tw-items-center tw-gap-y-24ptr tw-ml-18ptr md:tw-ml-0 tw-text-red tw-font-semibold">
+							<div class="tw-flex">
+								<img src="/common/images/share/icon/icon_solution-data.svg" alt="社員数社員アイコン"
+									class="tw-flex tw-items-center tw-w-60ptr md:tw-w-80ptr tw-h-60ptr md:tw-h-80ptr">
+								<span
+									class="tw-flex tw-items-center tw-justify-center tw-w-48ptr xxs:tw-w-88ptr md:tw-w-60ptr tw-h-60ptr md:tw-h-80ptr after:tw-content-['']  after:tw-rotate-[120deg] after:tw-inline-block after:tw-w-[20vw] after:tw-max-w-80ptr after:md:tw-min-w-120ptr after:md:tw-max-w-none after:tw-h-1ptr after:tw-bg-red"></span>
+							</div>
+							<div class="tw-flex tw-flex-wrap tw-items-end tw-gap-x-4ptr tw-gap-y-16ptr">
+								<span lang="en"
+									class="tw-text-64ptr md:tw-text-80ptr tw-font-light tw-leading-[0.5] js-count-up-target"
+									data-num="5000">5000</span>
+								<span class="tw-text-24ptr tw-font-semibold tw-text-red tw-leading-none">人</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<!-- リンク -->
+			<div
+				class="tw-box-content tw-flex tw-justify-end md:tw-justify-center tw-mx-auto tw-px-6 md:tw-px-10 tw-overflow-hidden tw-max-w-1200ptr">
+				<a class="link-bar-bottom tw-group tw-flex tw-flex-col tw-text-black" href="/">
+					<div class="tw-relative tw-hidden md:tw-flex tw-gap-x-16ptr tw-text-40ptr tw-font-light tw-leading-normal after:tw-content-[''] after:tw-relative after:tw-block after:tw-top-[47%] after:tw--translate-y-1/2 after:tw-w-29ptr after:tw-h-29ptr after:tw-bg-black after:tw-rounded-[50%]"
+						lang="en">
+						<span>SOLUTION</span>
+						<span
+							class="tw-mask-icon [--mask-icon:url('../../common/images/share/icon/icon_arrow-right.svg')] tw-absolute tw-right-[10px] tw-top-[47%] tw--translate-y-1/2 tw-w-10ptr tw-h-8ptr tw-bg-white [transition:right_.3s] tw-z-[1] group-hover:tw-right-[4px]"></span>
+					</div>
+					<div class="tw-relative tw-flex tw-gap-x-16ptr tw-pt-1ptr tw-text-15ptr md:tw-text-16ptr tw-font-light tw-leading-normal after:tw-content-[''] after:tw-relative after:tw-block md:after:tw-hidden after:tw-top-[47%] after:tw--translate-y-1/2 after:tw-w-24ptr after:tw-h-24ptr after:tw-bg-black after:tw-rounded-[50%]"
+						lang="en">
+						<span>ソリューションについて</span>
+						<span
+							class="tw-mask-icon [--mask-icon:url('../../common/images/share/icon/icon_arrow-right.svg')] tw-hidden md:tw-inline-block tw-absolute tw-right-[8px] tw-top-[47%] tw--translate-y-1/2 tw-w-8ptr tw-h-6ptr tw-bg-white tw-z-[1]"></span>
+					</div>
+					<span
+						class="link-bar-bottom-line tw-relative  tw-pt-23ptr md:tw-pt-30ptr tw-overflow-hidden before:tw-content-[''] before:tw-absolute before:tw-bottom-0 before:tw-left-0 before:tw-block before:tw-w-full before:tw-h-2ptr before:tw-z-0 before:tw-bg-gray after:tw-content-[''] after:tw-absolute after:tw-bottom-0 after:tw-left-neg-100 after:tw-block after:tw-w-full after:tw-h-2ptr after:tw-z-[1] after:tw-bg-red"></span>
+
+				</a>
+			</div>
+		</section>
+
+		<!-- グループ会社 -->
+		<section class="tw-relative md:tw-overflow-visible tw-overflow-hidden">
+			<div class="js-neer-wing l-top-neer-wing-static-image tw-absolute tw-left-0" data-area="group_company">
+			</div>
+			<div
+				class="l-top-group_company tw-grid tw-max-w-1200ptr tw-mx-auto tw-gap-8 md:tw-gap-[36px] lg:tw-gap-[46px] tw-py-56ptr md:tw-pt-120ptr md:tw-pb-240ptr tw-px-6 md:tw-px-10">
+
+				<h2 class="[grid-area:head] tw-flex tw-flex-col tw-relative slash">
+					<span class="tw-text-80ptr md:tw-text-120ptr tw-font-light tw-leading-[1.1]" lang="en"
+						aria-hidden="true">
+						SN GROUP COMPANY
+					</span>
+					<span
+						class="tw-font-medium tw-text-15ptr md:tw-text-16ptr tw-tracking-wider tw-inline-flex
+		tw-gap-x-[6px] md:tw-gap-x-2 tw-items-center before:tw-content-[''] before:tw-inline-block before:tw-size-2 before:tw-rotate-45 before:tw-bg-red">
+						シンバネットワークグループ各社について
+					</span>
+				</h2>
+				<div
+					class="[grid-area:content] tw-flex tw-flex-row tw-flex-wrap tw-gap-x-[7px] tw-gap-y-10 sm:tw-gap-10 tw-justify-start">
+					<div class="l-top-group_company-item js-scroll-animation">
+						<img src="/common/images/share/logo/logo_anshin.png" alt="株式会社あんしん">
+					</div>
+
+					<div class="l-top-group_company-item js-scroll-animation">
+						<img src="/common/images/share/logo/logo_oat.png" alt="沖縄空輸株式会社">
+					</div>
+
+					<div class="l-top-group_company-item js-scroll-animation">
+						<img src="/common/images/share/logo/logo_okinawakuuyu.png" alt="沖縄海陸物流株式会社">
+					</div>
+
+					<div class="l-top-group_company-item js-scroll-animation">
+						<img src="/common/images/share/logo/logo_senden.png" alt="株式会社宣伝">
+					</div>
+
+					<div class="l-top-group_company-item js-scroll-animation">
+						<img src="/common/images/share/logo/logo_oco.png" alt="株式会社オー・シ・ーオー">
+					</div>
+
+					<div class="l-top-group_company-item js-scroll-animation">
+						<img src="/common/images/share/logo/logo_shops.png" alt="株式会社ショップス">
+					</div>
+
+					<div class="l-top-group_company-item js-scroll-animation">
+						<img src="/common/images/share/logo/logo_prolabo.png" alt="株式会社プロラボ琉球">
+					</div>
+
+					<div class="l-top-group_company-item js-scroll-animation">
+						<img src="/common/images/share/logo/logo_tiidakankou.png" alt="てぃーだ観光株式会社">
+					</div>
+
+					<div class="l-top-group_company-item js-scroll-animation">
+						<img src="/common/images/share/logo/logo_miyasu.png" alt="株式会社美安タクシー">
+					</div>
+
+					<div class="l-top-group_company-item js-scroll-animation">
+						<img src="/common/images/share/logo/logo_clair.png" alt="グループ会社">
+					</div>
+
+					<div class="l-top-group_company-item js-scroll-animation">
+						<img src="/common/images/share/logo/logo_syaryoukan.png" alt="株式会社車輌館">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- リクルート -->
+		<section
+			class="tw-bg-red tw-py-14 tw-px-6 md:tw-px-20 md:tw-py-120ptr tw-grid tw-grid-cols-[repeat(1,minmax(0,auto))] tw-justify-center tw-overflow-hidden tw-relative js-hover-target before:tw-bg-dark-red before:tw-content-[''] before:tw-h-full before:tw-left-[0] before:tw-absolute before:tw-top-[0] before:tw--translate-x-[120%] before:tw-origin-[left_bottom] before:[transition:transform_.3s_var(--ease-out-cubic)] before:tw-w-[120%] [&.is-active]:before:tw-translate-x-0 [&.is-active]:before:tw-ease-[--ease-inout-cubic] [&.is-active]:before:tw-duration-500">
+			<a href="" class="tw-group js-hover-trigger">
+				<h2 class="tw-text-white tw-flex tw-flex-col tw-relative slash slash-large">
+					<span
+						class="tw-text-68ptr xxs:tw-text-80ptr md:tw-text-160ptr tw-font-light tw-leading-[1.2] tw-flex tw-items-center md:tw-gap-6 tw-gap-4"
+						lang="en">
+						RECRUIT
+						<span
+							class="tw-inline-grid tw-place-items-center tw-mb-14ptr tw-rounded-full md:data-[size='xlarge']:tw-size-88ptr tw-size-64ptr md:tw-mb-6  data-[size='large']:tw-size-40ptr data-[size='small']:tw-size-16ptr data-[bg-color='transparent']:tw-bg-transparent data-[bg-color='white']:tw-bg-white data-[bg-color='transparent']:[border:1px_solid_var(--color-white)]"
+							data-size="xlarge" data-bg-color="white">
+							<span
+								class="tw-h-[var(--arrow-height,theme('height.6ptr'))] tw-w-[var(--arrow-width,theme('width.8ptr'))] tw-transition-transform tw-duration-300 tw-mask-icon [--arrow-height:12px] [--arrow-width:15px] md:[--arrow-height:17px] md:[--arrow-width:21px] [--mask-icon:url('../../common/images/share/icon/icon_arrow-right.svg')] group-hover:tw-translate-x-2 data-[arrow-color='black']:tw-bg-black data-[arrow-color='white']:tw-bg-white data-[arrow-color='red']:tw-bg-red"
+								data-arrow-color="red"></span>
+						</span>
+					</span>
+				</h2>
+			</a>
+
+			<p
+				class="tw-text-white tw-max-w-600ptr tw-mt-2 tw-leading-medium tw-tracking-[1.8px] tw-font-light tw-relative tw-z-[2] md:tw-text-18ptr md:-tw-mt-4">
+				当グループでは、多様なキャリア人材を求めています。成長し続けるグループの一員として、沖縄から日本、世界を変える<br class="md:tw-inline tw-hidden"
+					aria-hidden="true">「新しい価値」をともに生み出していきましょう。
+			</p>
+		</section>
+
+		<!-- 新着情報 -->
+		<div class="l-top-news-wrap tw-relative tw-overflow-hidden">
+			<div class="js-far-wing l-top-far-wing-static-image tw-absolute tw-left-0" data-area="news"></div>
+			<section
+				class="l-top-news tw-relative tw-z-[2] tw-grid tw-mx-auto tw-gap-8 tw-py-14 tw-px-6 tw-max-w-1200ptr md:tw-px-10 md:tw-py-120ptr md:tw-gap-20 tw-box-content">
+				<h2 class="[grid-area:head] tw-flex tw-flex-col tw-relative slash">
+					<span class="tw-text-80ptr md:tw-text-120ptr tw-font-light tw-leading-[1.1]" lang="en"
+						aria-hidden="true">
+						NEWS
+					</span>
+					<span
+						class="tw-font-bold tw-text-15ptr md:tw-text-16ptr tw-tracking-wider tw-inline-flex tw-gap-2 tw-items-center before:tw-content-[''] before:tw-mt-2ptr before:tw-inline-block before:tw-size-2 before:tw-rotate-45 before:tw-bg-red md:before:tw-mt-0">
+						新着情報
+					</span>
+				</h2>
+				<ul class="[grid-area:news] tw-list-none">
+					<li>
+						<article class="tw-inline-flex tw-justify-end md:tw-justify-start tw-w-full tw-overflow-hidden">
+							<a class="tw-group tw-w-full link-bar-bottom tw-grid tw-grid-cols-[1fr_auto] tw-items-center tw-text-black"
+								href="/">
+								<dl
+									class="tw-py-6 tw-grid md:tw-gap-6 tw-gap-2 tw-items-center md:tw-grid-cols-[auto,minmax(0,1fr)] md:tw-py-8">
+									<dt class="tw-flex md:tw-gap-x-6 tw-gap-x-2 tw-items-center">
+										<time
+											class="tw-text-14ptr tw-leading-normal tw-font-en tw-text-black tw-tracking-wide"
+											datetime="2024-01-25">
+											2024.1.25
+										</time>
+										<span
+											class="tw-bg-transparent [border:1px_solid_var(--color-dark)] tw-whitespace-nowrap tw-w-60ptr tw-text-12ptr tw-leading-normal tw-inline-block tw-py-2ptr tw-px-6ptr tw-text-center">
+											TOPICS
+										</span>
+									</dt>
+									<dd
+										class="tw-w-full tw-flex tw-items-center tw-justify-between tw-gap-10ptr tw-tracking-wider tw-font-medium tw-text-black group-hover:tw-text-red tw-transition tw-duration-300">
+										石嶺児童園／浦添市社会福祉協議会へ寄付について
+									</dd>
+								</dl>
+								<span
+									class="tw-bg-black group-hover:tw-bg-red tw-transition-all tw-duration-300 tw-mask-icon [--mask-icon:url('../../common/images/share/icon/icon_arrow-right.svg')] tw-w-12ptr tw-h-9ptr"></span>
+								<span
+									class="tw-block tw-h-px link-bar-bottom-line tw-relative tw-overflow-hidden tw-col-start-1 tw-col-end-3 before:tw-content-[''] before:tw-absolute before:tw-bottom-0 before:tw-left-0 before:tw-block before:tw-w-full before:tw-h-px before:tw-z-0 before:tw-bg-medium-gray after:tw-content-[''] after:tw-absolute after:tw-bottom-0 md:after:tw-block after:tw-hidden after:tw-w-full after:tw-h-px after:tw-z-[1] after:tw-bg-red"></span>
+							</a>
+						</article>
+					</li>
+					<li>
+						<article class="tw-inline-flex tw-justify-end md:tw-justify-start tw-w-full tw-overflow-hidden">
+							<a class="tw-group tw-w-full link-bar-bottom tw-grid tw-grid-cols-[1fr_auto] tw-items-center tw-text-black"
+								href="/">
+								<dl
+									class="tw-py-6 tw-grid md:tw-gap-6 tw-gap-2 tw-items-center md:tw-grid-cols-[auto,minmax(0,1fr)] md:tw-py-8">
+									<dt class="tw-flex md:tw-gap-x-6 tw-gap-x-2 tw-items-center">
+										<time
+											class="tw-text-14ptr tw-leading-normal tw-font-en tw-text-black tw-tracking-wide"
+											datetime="2024-01-25">
+											2024.1.25
+										</time>
+										<span
+											class="tw-bg-transparent [border:1px_solid_var(--color-dark)] tw-whitespace-nowrap tw-w-60ptr tw-text-12ptr tw-leading-normal tw-inline-block tw-py-2ptr tw-px-6ptr tw-text-center">
+											NEWS
+										</span>
+									</dt>
+									<dd
+										class="tw-w-full tw-flex tw-items-center tw-justify-between tw-gap-10ptr tw-tracking-wider tw-font-medium tw-text-black group-hover:tw-text-red tw-transition tw-duration-300">
+										沖縄発サーチファンド事業組成共同記者会見
+									</dd>
+								</dl>
+								<span
+									class="tw-bg-black group-hover:tw-bg-red tw-transition-all tw-duration-300 tw-mask-icon [--mask-icon:url('../../common/images/share/icon/icon_arrow-right.svg')] tw-w-12ptr tw-h-9ptr"></span>
+								<span
+									class="tw-block tw-h-px link-bar-bottom-line tw-relative tw-overflow-hidden tw-col-start-1 tw-col-end-3 before:tw-content-[''] before:tw-absolute before:tw-bottom-0 before:tw-left-0 before:tw-block before:tw-w-full before:tw-h-px before:tw-z-0 before:tw-bg-medium-gray after:tw-content-[''] after:tw-absolute after:tw-bottom-0 md:after:tw-block after:tw-hidden after:tw-w-full after:tw-h-px after:tw-z-[1] after:tw-bg-red"></span>
+							</a>
+						</article>
+					</li>
+					<li>
+						<article class="tw-inline-flex tw-justify-end md:tw-justify-start tw-w-full tw-overflow-hidden">
+							<a class="tw-group tw-w-full link-bar-bottom tw-grid tw-grid-cols-[1fr_auto] tw-items-center tw-text-black"
+								href="/">
+								<dl
+									class="tw-py-6 tw-grid md:tw-gap-6 tw-gap-2 tw-items-center md:tw-grid-cols-[auto,minmax(0,1fr)] md:tw-py-8">
+									<dt class="tw-flex md:tw-gap-x-6 tw-gap-x-2 tw-items-center">
+										<time
+											class="tw-text-14ptr tw-leading-normal tw-font-en tw-text-black tw-tracking-wide"
+											datetime="2024-01-25">
+											2024.1.25
+										</time>
+										<span
+											class="tw-bg-transparent [border:1px_solid_var(--color-dark)] tw-whitespace-nowrap tw-w-60ptr tw-text-12ptr tw-leading-normal tw-inline-block tw-py-2ptr tw-px-6ptr tw-text-center">
+											お知らせ
+										</span>
+									</dt>
+									<dd
+										class="tw-w-full tw-flex tw-items-center tw-justify-between tw-gap-10ptr tw-tracking-wider tw-font-medium tw-text-black group-hover:tw-text-red tw-transition tw-duration-300">
+										令和5年度　あんしん入社式
+									</dd>
+								</dl>
+								<span
+									class="tw-bg-black group-hover:tw-bg-red tw-transition-all tw-duration-300 tw-mask-icon [--mask-icon:url('../../common/images/share/icon/icon_arrow-right.svg')] tw-w-12ptr tw-h-9ptr"></span>
+								<span
+									class="tw-block tw-h-px link-bar-bottom-line tw-relative tw-overflow-hidden tw-col-start-1 tw-col-end-3 before:tw-content-[''] before:tw-absolute before:tw-bottom-0 before:tw-left-0 before:tw-block before:tw-w-full before:tw-h-px before:tw-z-0 before:tw-bg-medium-gray after:tw-content-[''] after:tw-absolute after:tw-bottom-0 md:after:tw-block after:tw-hidden after:tw-w-full after:tw-h-px after:tw-z-[1] after:tw-bg-red"></span>
+							</a>
+						</article>
+					</li>
+					<li>
+						<article class="tw-inline-flex tw-justify-end md:tw-justify-start tw-w-full tw-overflow-hidden">
+							<a class="tw-group tw-w-full link-bar-bottom tw-grid tw-grid-cols-[1fr_auto] tw-items-center tw-text-black"
+								href="/">
+								<dl
+									class="tw-py-6 tw-grid md:tw-gap-6 tw-gap-2 tw-items-center md:tw-grid-cols-[auto,minmax(0,1fr)] md:tw-py-8">
+									<dt class="tw-flex md:tw-gap-x-6 tw-gap-x-2 tw-items-center">
+										<time
+											class="tw-text-14ptr tw-leading-normal tw-font-en tw-text-black tw-tracking-wide"
+											datetime="2024-01-25">
+											2024.1.25
+										</time>
+										<span
+											class="tw-bg-transparent [border:1px_solid_var(--color-dark)] tw-whitespace-nowrap tw-w-60ptr tw-text-12ptr tw-leading-normal tw-inline-block tw-py-2ptr tw-px-6ptr tw-text-center">
+											TOPICS
+										</span>
+									</dt>
+									<dd
+										class="tw-w-full tw-flex tw-items-center tw-justify-between tw-gap-10ptr tw-tracking-wider tw-font-medium tw-text-black group-hover:tw-text-red tw-transition tw-duration-300">
+										令和 5 年度 グループ役員人事のお知らせ
+									</dd>
+								</dl>
+								<span
+									class="tw-bg-black group-hover:tw-bg-red tw-transition-all tw-duration-300 tw-mask-icon [--mask-icon:url('../../common/images/share/icon/icon_arrow-right.svg')] tw-w-12ptr tw-h-9ptr"></span>
+								<span
+									class="tw-block tw-h-px link-bar-bottom-line tw-relative tw-overflow-hidden tw-col-start-1 tw-col-end-3 before:tw-content-[''] before:tw-absolute before:tw-bottom-0 before:tw-left-0 before:tw-block before:tw-w-full before:tw-h-px before:tw-z-0 before:tw-bg-medium-gray after:tw-content-[''] after:tw-absolute after:tw-bottom-0 md:after:tw-block after:tw-hidden after:tw-w-full after:tw-h-px after:tw-z-[1] after:tw-bg-red"></span>
+							</a>
+						</article>
+					</li>
+				</ul>
+				<!-- リンク -->
+				<div
+					class="[grid-area:link] tw-inline-flex tw-justify-end md:tw-justify-start tw-w-full tw-overflow-hidden md:tw-self-end">
+					<a class="link-bar-bottom tw-group tw-flex tw-flex-col tw-text-black" href="/">
+						<div
+							class="tw-relative tw-flex tw-items-center tw-gap-x-16ptr tw-text-16ptr md:tw-font-light tw-font-medium tw-leading-normal">
+							<span>一覧を見る</span>
+							<span
+								class="tw-inline-grid tw-shrink-0 tw-place-items-center tw-rounded-full md:tw-size-29ptr tw-size-24ptr tw-bg-black">
+								<span
+									class="tw-h-[var(--arrow-height,theme('height.6ptr'))] tw-w-[var(--arrow-width,theme('width.8ptr'))] tw-transition-all tw-duration-300 tw-mask-icon md:[--arrow-height:8px] md:[--arrow-width:10px] [--mask-icon:url('../../common/images/share/icon/icon_arrow-right.svg')] tw-relative tw-right-0 group-hover:-tw-right-[6px] data-[arrow-color='black']:tw-bg-black data-[arrow-color='white']:tw-bg-white"
+									data-arrow-color="white"></span>
+							</span>
+						</div>
+
+						<span
+							class="link-bar-bottom-line tw-relative tw-pt-23ptr md:tw-pt-30ptr tw-overflow-hidden before:tw-content-[''] before:tw-absolute before:tw-bottom-0 before:tw-left-0 before:tw-block before:tw-w-full before:tw-h-2ptr before:tw-z-0 before:tw-bg-gray after:tw-content-[''] after:tw-absolute after:tw-bottom-0 after:tw-left-neg-100 after:tw-block after:tw-w-full after:tw-h-2ptr after:tw-z-[1] after:tw-bg-red"></span>
+					</a>
+				</div>
+			</section>
+		</div>
+	</main>
+
+	<footer
+		class="[:where(&)_a]:tw-text-current [&_ul]:tw-list-none l-footer-grid-layout tw-relative tw-grid tw-gap-y-14 tw-bg-black tw-pb-[--sp-cta-height] tw-text-white md:tw-gap-y-20 md:tw-pb-0">
+		<!-- ロゴ住所 -->
+		<div
+			class="tw-mt-[-1rem] tw-grid tw-place-items-center tw-pt-10 [border-top:1px_solid_var(--color-gray)] [grid-area:address] md:tw-mt-0 md:tw-block md:tw-border-0 md:tw-pt-0">
+			<address
+				class="tw-grid tw-gap-2 tw-not-italic [--mask-icon:url('../../common/images/share/icon/icon_logo.svg')] before:tw-aspect-[280/29.15] before:tw-w-full before:tw-max-w-280ptr before:tw-bg-white before:tw-content-[''] before:tw-mask-icon">
+				<h3 class="tw-text-15ptr tw-font-bold tw-tracking-[0.09375em]">
+					シンバホールディングス株式会社
+				</h3>
+				<span class="tw-text-14ptr">
+					〒901-2122 沖縄県浦添市勢理客四丁目15番15号
+				</span>
+			</address>
+			<ul class="tw-flex tw-gap-15ptr ~md:tw-~mt-24ptr/40ptr">
+				<li>
+					<a href="/" aria-label="facebook"
+						class="tw-inline-block tw-size-8 tw-bg-white tw-mask-icon [--mask-icon:url('../../common/images/share/icon/icon_facebook.svg')] md:tw-size-6"></a>
+				</li>
+				<li>
+					<a href="/" aria-label="instagram"
+						class="tw-inline-block tw-size-8 tw-bg-white tw-mask-icon [--mask-icon:url('../../common/images/share/icon/icon_instagram.svg')] md:tw-size-6"></a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- ナビゲーション -->
+		<nav
+			class="md:~lg/pc:tw-~ml-40ptr/80ptr md:~lg/pc:tw-~gap-24ptr/40ptr tw-gap-y-10 tw-mx-auto tw-grid [grid-area:nav] md:tw-w-[calc(100%-clamp(2.5rem,-1.67rem+5.56vw,5rem))] md:tw-justify-between md:[grid-template-columns:repeat(3,minmax(0,auto))] lg:[grid-template-columns:repeat(5,minmax(0,auto))] maxMd:tw-w-full maxMd:tw-max-w-400ptr">
+			<ul class="tw-grid tw-auto-rows-min md:tw-gap-4 tw-gap-2">
+				<li>
+					<a href="/"
+						class="tw-group tw-inline-flex tw-w-full tw-items-center tw-gap-2 tw-text-18ptr tw-font-medium tw-leading-normal md:tw-gap-4"
+						lang="en">
+						SYMBA NETWORK
+						<span
+							class="tw-mb-3ptr tw-inline-grid tw-shrink-0 tw-place-items-center tw-rounded-full data-[size='large']:tw-size-63ptr data-[size='small']:tw-size-16ptr data-[bg-color='transparent']:tw-bg-transparent data-[bg-color='white']:tw-bg-white data-[bg-color='transparent']:[border:1px_solid_var(--color-white)]"
+							data-size="small" data-bg-color="white">
+							<span
+								class="tw-h-[var(--arrow-width,theme('height.6ptr'))] tw-w-[var(--arrow-width,theme('width.8ptr'))] tw-transition-transform tw-duration-300 tw-mask-icon [--mask-icon:url('../../common/images/share/icon/icon_arrow-right.svg')] group-hover:tw-translate-x-1 data-[arrow-color='black']:tw-bg-black data-[arrow-color='white']:tw-bg-white"
+								data-arrow-color="black"></span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<ul
+						class="tw-grid tw-grid-cols-[repeat(2,auto)] tw-items-start tw-justify-between md:tw-gap-2 tw-gap-4 [--mask-icon:url('../../common/images/share/icon/icon_arrow-right.svg')] md:tw-grid-cols-1 maxMd:tw-auto-cols-min [&_li:nth-child(3)_a:after]:-tw-rotate-45 maxMd:[&_li:nth-child(3)_a]:~min-[20rem]/xxs:tw-~w-122ptr/144ptr [&_li_a]:tw-flex [&_li_a]:tw-items-center [&_li_a]:tw-gap-7ptr [&_li_a]:tw-text-14ptr [&_li_a]:tw-leading-normal [&_li_a]:tw-transition-all [&_li_a]:tw-duration-300 [&_li_a]:after:tw-content-[''] [&_li_a]:after:tw-transition-all [&_li_a]:after:tw-duration-300 [&_li_a]:after:tw-h-8ptr [&_li_a]:after:tw-w-10ptr [&_li_a]:after:tw-bg-white [&_li_a]:after:tw-mask-icon md:[&_li_a]:tw-justify-between md:[&_li_a]:tw-gap-10ptr md:[&_li_a]:tw-text-15ptr maxMd:[&_li_a]:tw-justify-between  maxMd:tw-grid-rows-[20px]">
+						<li class="maxMd:tw-order-1">
+							<a href="/" class="hover:tw-text-gray hover:after:tw-bg-gray"> ネットワーク理念 </a>
+						</li>
+						<li class="maxMd:tw-order-3">
+							<a href="/" class="hover:tw-text-gray hover:after:tw-bg-gray"> SDGsへの取り組み </a>
+						</li>
+						<li class="maxMd:tw-order-2">
+							<a href="/" class="hover:tw-text-gray hover:after:tw-bg-gray">
+								ベースボール
+								<br class="md:tw-hidden" aria-hidden="true" />
+								クラブチーム
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<a href="/"
+						class="tw-group tw-inline-flex tw-w-full tw-items-center tw-gap-2 tw-text-18ptr tw-font-medium tw-leading-normal md:tw-gap-4"
+						lang="en">
+						SOLUTION
+						<span
+							class="tw-mb-3ptr tw-inline-grid tw-shrink-0 tw-place-items-center tw-rounded-full data-[size='large']:tw-size-63ptr data-[size='small']:tw-size-16ptr data-[bg-color='transparent']:tw-bg-transparent data-[bg-color='white']:tw-bg-white data-[bg-color='transparent']:[border:1px_solid_var(--color-white)]"
+							data-size="small" data-bg-color="white">
+							<span
+								class="tw-h-[var(--arrow-width,theme('height.6ptr'))] tw-w-[var(--arrow-width,theme('width.8ptr'))] tw-transition-transform tw-duration-300 tw-mask-icon [--mask-icon:url('../../common/images/share/icon/icon_arrow-right.svg')] group-hover:tw-translate-x-1 data-[arrow-color='black']:tw-bg-black data-[arrow-color='white']:tw-bg-white"
+								data-arrow-color="black"></span>
+						</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="tw-grid tw-auto-rows-min md:tw-gap-4 tw-gap-2">
+				<li>
+					<a href="/"
+						class="tw-group tw-inline-flex tw-w-full tw-items-center tw-gap-2 tw-text-18ptr tw-font-medium tw-leading-normal md:tw-gap-4"
+						lang="en">
+						COMPANY
+						<span
+							class="tw-mb-3ptr tw-inline-grid tw-shrink-0 tw-place-items-center tw-rounded-full data-[size='large']:tw-size-63ptr data-[size='small']:tw-size-16ptr data-[bg-color='transparent']:tw-bg-transparent data-[bg-color='white']:tw-bg-white data-[bg-color='transparent']:[border:1px_solid_var(--color-white)]"
+							data-size="small" data-bg-color="white">
+							<span
+								class="tw-h-[var(--arrow-width,theme('height.6ptr'))] tw-w-[var(--arrow-width,theme('width.8ptr'))] tw-transition-transform tw-duration-300 tw-mask-icon [--mask-icon:url('../../common/images/share/icon/icon_arrow-right.svg')] group-hover:tw-translate-x-1 data-[arrow-color='black']:tw-bg-black data-[arrow-color='white']:tw-bg-white"
+								data-arrow-color="black"></span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<ul
+						class="tw-grid tw-auto-cols-min tw-grid-cols-[repeat(2,auto)] tw-items-start tw-justify-between md:tw-gap-2 tw-gap-4 [--mask-icon:url('../../common/images/share/icon/icon_arrow-right.svg')] md:tw-grid-cols-1 maxMd:tw-auto-cols-min maxMd:[&_li:nth-child(2n)_a]:~min-[20rem]/xxs:tw-~w-122ptr/144ptr [&_li_a]:tw-flex [&_li_a]:tw-items-center [&_li_a]:tw-gap-7ptr [&_li_a]:tw-text-14ptr [&_li_a]:tw-leading-normal [&_li_a]:tw-trasnsition-all [&_li_a]:tw-duration-300 [&_li_a]:after:tw-content-[''] [&_li_a]:after:tw-transition-all [&_li_a]:after:tw-duration-300 [&_li_a]:after:tw-h-8ptr [&_li_a]:after:tw-w-10ptr [&_li_a]:after:tw-bg-white [&_li_a]:after:tw-mask-icon md:[&_li_a]:tw-justify-between md:[&_li_a]:tw-gap-10ptr md:[&_li_a]:tw-text-15ptr maxMd:[&_li_a]:tw-justify-between">
+						<li><a href="/" class="hover:tw-text-gray hover:after:tw-bg-gray">CEOメッセージ</a></li>
+						<li><a href="/" class="hover:tw-text-gray hover:after:tw-bg-gray">COOメッセージ</a></li>
+						<li>
+							<a href="/" class="hover:tw-text-gray hover:after:tw-bg-gray">
+								会社組織・<br class="xxs:tw-hidden" aria-hidden="true" />
+								役員一覧
+							</a>
+						</li>
+						<li><a href="/"
+								class="tw-trasnsition-all tw-duration-300 hover:tw-text-gray hover:after:tw-bg-gray">創業ヒストリー</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<a href="/"
+						class="tw-group tw-inline-flex tw-w-full tw-items-center tw-gap-2 tw-text-18ptr tw-font-medium tw-leading-normal md:tw-gap-4"
+						lang="en">
+						NEWS
+						<span
+							class="tw-mb-3ptr tw-inline-grid tw-shrink-0 tw-place-items-center tw-rounded-full data-[size='large']:tw-size-63ptr data-[size='small']:tw-size-16ptr data-[bg-color='transparent']:tw-bg-transparent data-[bg-color='white']:tw-bg-white data-[bg-color='transparent']:[border:1px_solid_var(--color-white)]"
+							data-size="small" data-bg-color="white">
+							<span
+								class="tw-h-[var(--arrow-width,theme('height.6ptr'))] tw-w-[var(--arrow-width,theme('width.8ptr'))] tw-transition-transform tw-duration-300 tw-mask-icon [--mask-icon:url('../../common/images/share/icon/icon_arrow-right.svg')] group-hover:tw-translate-x-1 data-[arrow-color='black']:tw-bg-black data-[arrow-color='white']:tw-bg-white"
+								data-arrow-color="black"></span>
+						</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="tw-grid tw-auto-rows-min md:tw-gap-4 tw-gap-2">
+				<li>
+					<a href="/"
+						class="tw-group tw-inline-flex tw-w-full tw-items-center tw-gap-2 tw-text-18ptr tw-font-medium tw-leading-normal md:tw-gap-4"
+						lang="en">
+						RECRUIT
+						<span
+							class="tw-mb-3ptr tw-inline-grid tw-shrink-0 tw-place-items-center tw-rounded-full data-[size='large']:tw-size-63ptr data-[size='small']:tw-size-16ptr data-[bg-color='transparent']:tw-bg-transparent data-[bg-color='white']:tw-bg-white data-[bg-color='transparent']:[border:1px_solid_var(--color-white)]"
+							data-size="small" data-bg-color="white">
+							<span
+								class="tw-h-[var(--arrow-width,theme('height.6ptr'))] tw-w-[var(--arrow-width,theme('width.8ptr'))] tw-transition-transform tw-duration-300 tw-mask-icon [--mask-icon:url('../../common/images/share/icon/icon_arrow-right.svg')] group-hover:tw-translate-x-1 data-[arrow-color='black']:tw-bg-black data-[arrow-color='white']:tw-bg-white"
+								data-arrow-color="black"></span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<ul
+						class="xl:~xl/pc:tw-~w-144ptr/155ptr tw-grid tw-auto-cols-min tw-grid-cols-[repeat(2,auto)] tw-items-start tw-justify-between md:tw-gap-2 tw-gap-4  [--mask-icon:url('../../common/images/share/icon/icon_arrow-right.svg')] md:tw-grid-cols-1 maxMd:tw-auto-cols-min maxMd:[&_li:nth-child(2n)_a]:~min-[20rem]/xxs:tw-~w-122ptr/144ptr [&_li_a]:tw-flex [&_li_a]:tw-items-center [&_li_a]:tw-gap-7ptr [&_li_a]:tw-text-14ptr [&_li_a]:tw-leading-normal [&_li_a]:tw-trasnsition-all [&_li_a]:tw-duration-300 [&_li_a]:after:tw-content-[''] [&_li_a]:after:tw-transition-all [&_li_a]:after:tw-duration-300 [&_li_a]:after:tw-h-8ptr [&_li_a]:after:tw-w-10ptr [&_li_a]:after:tw-bg-white [&_li_a]:after:tw-mask-icon md:[&_li_a]:tw-justify-between md:[&_li_a]:tw-gap-10ptr md:[&_li_a]:tw-text-15ptr maxMd:[&_li_a]:tw-justify-between">
+						<li><a href="/" class="hover:tw-text-gray hover:after:tw-bg-gray">総合職</a></li>
+						<li><a href="/" class="hover:tw-text-gray hover:after:tw-bg-gray">事務職</a></li>
+						<li><a href="/" class="hover:tw-text-gray hover:after:tw-bg-gray">職場環境・制度</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<!-- トップに戻る -->
+		<a href="#body" aria-label="トップに戻る"
+			class="smooth tw-group tw-absolute tw-left-[20px] tw-inline-flex tw-self-end [grid-area:toTop] md:tw-static md:tw-ml-[min(calc(56*100/1920*1vw),theme('spacing.20'))] md:tw-self-start">
+			<span
+				class="tw-text-16pttr after:tw-duraiton-300 tw-rotate-180 tw-font-light tw-leading-normal [--mask-icon:url('../../common/images/share/icon/icon_arrow-right.svg')] [writing-mode:vertical-rl] after:tw-content-[''] after:tw-mt-4 after:tw-h-12ptr after:tw-w-15ptr after:tw-rotate-90 after:tw-bg-white after:tw-transition-transform after:tw-mask-icon group-hover:after:[transform:rotate(90deg)_translateX(8px)] md:tw-text-24ptr md:after:tw-h-20ptr md:after:tw-w-15ptr"
+				lang="en">
+				to TOP
+			</span>
+		</a>
+		<!-- プライバシーポリシー -->
+		<div class="tw-max-w-1200ptr tw-mx-auto tw-w-full [grid-area:policy] md:tw-pt-33ptr">
+			<ul
+				class="tw-flex tw-justify-between xxs:tw-gap-x-10 tw-py-4 tw-text-12ptr xxs:tw-justify-center md:tw-justify-between">
+				<li class="tw-tracking-medium">
+					<a href="/policy">プライバシーポリシー</a>
+				</li>
+				<li class="tw-inline-flex tw-gap-1 tw-tracking-medium" lang="en"><span>©</span> SYMBA HOLDINGS Co., Ltd
+				</li>
+			</ul>
+		</div>
+	</footer>
+	<script src='/common/lib/jquery-3.7.1.min.js?ver=1.0' id='jquery-js'></script>
+	<script src='/common/js/common.min.js?ver=1.0' id='ri_common-js'></script>
+	<script src="/common/js/pages/top.min.js?ver=1.0" defer></script>
+	<script src="/common/lib/numerator/jquery-numerator.js?ver=1.0" defer></script>
+	<script src="/common/lib/video/video.min.js?ver=1.0" defer></script>
+</body>
+
+</html>

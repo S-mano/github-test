@@ -1,0 +1,213 @@
+@use "../global" as *;
+
+// ==================================================
+// Webフォント
+// ==================================================
+
+// ==================================================
+// フォントスタイル
+// ==================================================
+
+// --------------------------------------------------
+// lang="en"の場合
+// --------------------------------------------------
+[lang="en"] {
+	font-family: $ff-en;
+}
+
+// --------------------------------------------------
+// フォントサイズ（初期値）
+// --------------------------------------------------
+@for $i from 8 through 30 {
+	.fz-#{$i} {
+		font-size: #{$i}px;
+	}
+
+	@media (min-width: $screen-xs-min) {
+		.fz-#{$i}-xs {
+			font-size: #{$i}px;
+		}
+	}
+
+	@media (min-width: $screen-sm-min) {
+		.fz-#{$i}-sm {
+			font-size: #{$i}px;
+		}
+	}
+
+	@media (min-width: $screen-md-min) {
+		.fz-#{$i}-md {
+			font-size: #{$i}px;
+		}
+	}
+
+	@media (min-width: $screen-lg-min) {
+		.fz-#{$i}-lg {
+			font-size: #{$i}px;
+		}
+	}
+}
+
+// --------------------------------------------------
+// フォントサイズ（拡張）
+// --------------------------------------------------
+@each $n in $font-size-array {
+	.fz-#{$n} {
+		font-size: #{$n}px;
+	}
+
+	@media (min-width: $screen-xs-min) {
+		.fz-#{$n}-xs {
+			font-size: #{$n}px;
+		}
+	}
+
+	@media (min-width: $screen-sm-min) {
+		.fz-#{$n}-sm {
+			font-size: #{$n}px;
+		}
+	}
+
+	@media (min-width: $screen-md-min) {
+		.fz-#{$n}-md {
+			font-size: #{$n}px;
+		}
+	}
+
+	@media (min-width: $screen-lg-min) {
+		.fz-#{$n}-lg {
+			font-size: #{$n}px;
+		}
+	}
+}
+
+// --------------------------------------------------
+// 行間と太字
+// --------------------------------------------------
+.fw-b {
+	font-weight: bold;
+}
+
+.fw-n {
+	font-weight: normal;
+}
+
+.lh-1em {
+	line-height: 1em;
+}
+
+.lh-1_25em {
+	line-height: 1.25em;
+}
+
+.lh-1_5em {
+	line-height: 1.5em;
+}
+
+.lh-1_75em {
+	line-height: 1.75em;
+}
+
+@media (min-width: $screen-xs-min) {
+	.fw-b-xs {
+		font-weight: bold;
+	}
+
+	.fw-n-xs {
+		font-weight: normal;
+	}
+
+	.lh-1em-xs {
+		line-height: 1em;
+	}
+
+	.lh-1_25em-xs {
+		line-height: 1.25em;
+	}
+
+	.lh-1_5em-xs {
+		line-height: 1.5em;
+	}
+
+	.lh-1_75em-xs {
+		line-height: 1.75em;
+	}
+}
+
+@media (min-width: $screen-sm-min) {
+	.fw-b-sm {
+		font-weight: bold;
+	}
+
+	.fw-n-sm {
+		font-weight: normal;
+	}
+
+	.lh-1em-sm {
+		line-height: 1em;
+	}
+
+	.lh-1_25em-sm {
+		line-height: 1.25em;
+	}
+
+	.lh-1_5em-sm {
+		line-height: 1.5em;
+	}
+
+	.lh-1_75em-sm {
+		line-height: 1.75em;
+	}
+}
+
+@media (min-width: $screen-md-min) {
+	.fw-b-md {
+		font-weight: bold;
+	}
+
+	.fw-n-md {
+		font-weight: normal;
+	}
+
+	.lh-1em-md {
+		line-height: 1em;
+	}
+
+	.lh-1_25em-md {
+		line-height: 1.25em;
+	}
+
+	.lh-1_5em-md {
+		line-height: 1.5em;
+	}
+
+	.lh-1_75em-md {
+		line-height: 1.75em;
+	}
+}
+
+@media (min-width: $screen-lg-min) {
+	.fw-b-lg {
+		font-weight: bold;
+	}
+
+	.fw-n-lg {
+		font-weight: normal;
+	}
+
+	.lh-1em-lg {
+		line-height: 1em;
+	}
+
+	.lh-1_25em-lg {
+		line-height: 1.25em;
+	}
+
+	.lh-1_5em-lg {
+		line-height: 1.5em;
+	}
+
+	.lh-1_75em-lg {
+		line-height: 1.75em;
+	}
+}

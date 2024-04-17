@@ -1,0 +1,486 @@
+@use "../global" as *;
+
+// ==================================================
+// コンポーネント：レイアウト
+// ==================================================
+// --------------------------------------------------
+// デフォルト
+// --------------------------------------------------
+.pos-a {
+	position: absolute;
+}
+
+.pos-r {
+	position: relative;
+}
+
+.pos-f {
+	position: fixed;
+}
+
+.d-b {
+	display: block;
+}
+
+.d-n {
+	display: none;
+}
+
+.d-i {
+	display: inline;
+}
+
+.d-ib {
+	display: inline-block;
+}
+
+.d-t {
+	display: table;
+}
+
+.d-tbc {
+	display: table-cell;
+}
+
+.d-tbr {
+	display: table-row;
+}
+
+@media (min-width: $screen-xs-min) {
+	.pos-a-xs {
+		position: absolute;
+	}
+
+	.pos-r-xs {
+		position: relative;
+	}
+
+	.pos-f-xs {
+		position: fixed;
+	}
+
+	.d-b-xs {
+		display: block;
+	}
+
+	.d-n-xs {
+		display: none;
+	}
+
+	.d-i-xs {
+		display: inline;
+	}
+
+	.d-ib-xs {
+		display: inline-block;
+	}
+
+	.d-t-xs {
+		display: table;
+	}
+
+	.d-tbc-xs {
+		display: table-cell;
+	}
+
+	.d-tbr-xs {
+		display: table-row;
+	}
+}
+
+@media (min-width: $screen-sm-min) {
+	.pos-a-sm {
+		position: absolute;
+	}
+
+	.pos-r-sm {
+		position: relative;
+	}
+
+	.pos-f-sm {
+		position: fixed;
+	}
+
+	.d-b-sm {
+		display: block;
+	}
+
+	.d-n-sm {
+		display: none;
+	}
+
+	.d-i-sm {
+		display: inline;
+	}
+
+	.d-ib-sm {
+		display: inline-block;
+	}
+
+	.d-t-sm {
+		display: table;
+	}
+
+	.d-tbc-sm {
+		display: table-cell;
+	}
+
+	.d-tbr-sm {
+		display: table-row;
+	}
+}
+
+@media (min-width: $screen-md-min) {
+	.pos-a-md {
+		position: absolute;
+	}
+
+	.pos-r-md {
+		position: relative;
+	}
+
+	.pos-f-md {
+		position: fixed;
+	}
+
+	.d-b-md {
+		display: block;
+	}
+
+	.d-n-md {
+		display: none;
+	}
+
+	.d-i-md {
+		display: inline;
+	}
+
+	.d-ib-md {
+		display: inline-block;
+	}
+
+	.d-t-md {
+		display: table;
+	}
+
+	.d-tbc-md {
+		display: table-cell;
+	}
+
+	.d-tbr-md {
+		display: table-row;
+	}
+}
+
+@media (min-width: $screen-lg-min) {
+	.pos-a-lg {
+		position: absolute;
+	}
+
+	.pos-r-lg {
+		position: relative;
+	}
+
+	.pos-f-lg {
+		position: fixed;
+	}
+
+	.d-b-lg {
+		display: block;
+	}
+
+	.d-n-lg {
+		display: none;
+	}
+
+	.d-i-lg {
+		display: inline;
+	}
+
+	.d-ib-lg {
+		display: inline-block;
+	}
+
+	.d-t-lg {
+		display: table;
+	}
+
+	.d-tbc-lg {
+		display: table-cell;
+	}
+
+	.d-tbr-lg {
+		display: table-row;
+	}
+}
+
+// --------------------------------------------------
+// 行揃え
+// --------------------------------------------------
+.ta-c {
+	text-align: center;
+}
+
+.ta-l {
+	text-align: left;
+}
+
+.ta-r {
+	text-align: right;
+}
+
+.va-t {
+	vertical-align: top;
+}
+
+.va-b {
+	vertical-align: bottom;
+}
+
+.va-bl {
+	vertical-align: baseline;
+}
+
+.va-m {
+	vertical-align: middle;
+}
+
+.va-sup {
+	vertical-align: super;
+}
+
+.va-sub {
+	vertical-align: sub;
+}
+
+.fl-l {
+	float: left;
+}
+
+.fl-r {
+	float: right;
+}
+
+.cl {
+	clear: both;
+}
+
+.l-0 {
+	left: 0;
+}
+
+.t-0 {
+	top: 0;
+}
+
+.r-0 {
+	right: 0;
+}
+
+.b-0 {
+	bottom: 0;
+}
+
+@media (min-width: $screen-xs-min) {
+	.ta-c-xs {
+		text-align: center;
+	}
+
+	.ta-l-xs {
+		text-align: left;
+	}
+
+	.ta-r-xs {
+		text-align: right;
+	}
+
+	.va-t-xs {
+		vertical-align: top;
+	}
+
+	.va-b-xs {
+		vertical-align: bottom;
+	}
+
+	.va-m-xs {
+		vertical-align: middle;
+	}
+
+	.fl-l-xs {
+		float: left;
+	}
+
+	.fl-r-xs {
+		float: right;
+	}
+
+	.cl-xs {
+		clear: both;
+	}
+}
+
+@media (min-width: $screen-sm-min) {
+	.ta-c-sm {
+		text-align: center;
+	}
+
+	.ta-l-sm {
+		text-align: left;
+	}
+
+	.ta-r-sm {
+		text-align: right;
+	}
+
+	.va-t-sm {
+		vertical-align: top;
+	}
+
+	.va-b-sm {
+		vertical-align: bottom;
+	}
+
+	.va-m-sm {
+		vertical-align: middle;
+	}
+
+	.fl-l-sm {
+		float: left;
+	}
+
+	.fl-r-sm {
+		float: right;
+	}
+
+	.cl-sm {
+		clear: both;
+	}
+}
+
+@media (min-width: $screen-md-min) {
+	.ta-c-md {
+		text-align: center;
+	}
+
+	.ta-l-md {
+		text-align: left;
+	}
+
+	.ta-r-md {
+		text-align: right;
+	}
+
+	.va-t-md {
+		vertical-align: top;
+	}
+
+	.va-b-md {
+		vertical-align: bottom;
+	}
+
+	.va-m-md {
+		vertical-align: middle;
+	}
+
+	.fl-l-md {
+		float: left;
+	}
+
+	.fl-r-md {
+		float: right;
+	}
+
+	.cl-md {
+		clear: both;
+	}
+}
+
+@media (min-width: $screen-lg-min) {
+	.ta-c-lg {
+		text-align: center;
+	}
+
+	.ta-l-lg {
+		text-align: left;
+	}
+
+	.ta-r-lg {
+		text-align: right;
+	}
+
+	.va-t-lg {
+		vertical-align: top;
+	}
+
+	.va-b-lg {
+		vertical-align: bottom;
+	}
+
+	.va-m-lg {
+		vertical-align: middle;
+	}
+
+	.fl-l-lg {
+		float: left;
+	}
+
+	.fl-r-lg {
+		float: right;
+	}
+
+	.cl-lg {
+		clear: both;
+	}
+}
+
+// --------------------------------------------------
+// その他
+// --------------------------------------------------
+.td-n {
+	text-decoration: none;
+}
+
+.td-u {
+	text-decoration: underline;
+}
+
+.trs {
+	transition: 0.5s;
+}
+
+.trs-first {
+	transition: 0.2s;
+}
+
+.trs-slow {
+	transition: 1s;
+}
+
+.content-box {
+	box-sizing: content-box;
+}
+
+.border-box {
+	box-sizing: border-box;
+}
+
+.ov-h {
+	overflow: hidden;
+}
+
+// pc-view,sp-view
+.pc-view {
+	display: none;
+
+	@media (min-width: $screen-md-min) {
+		display: block;
+	}
+}
+
+.sp-view {
+	display: block;
+
+	@media (min-width: $screen-md-min) {
+		display: none;
+	}
+}

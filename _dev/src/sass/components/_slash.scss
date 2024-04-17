@@ -1,0 +1,36 @@
+@use "../global" as *;
+
+.slash {
+	&::before {
+		position: absolute;
+		top: 55px;
+		left: -50px;
+		z-index: 1;
+		display: block;
+		width: 100px;
+		height: 1px;
+		content: "";
+		background-color: var(--color-red);
+		transform: rotate(300deg);
+
+		@media (min-width: $screen-md-min) {
+			top: 80px;
+			left: -90px;
+			width: 200px;
+		}
+	}
+
+	&-large {
+		&::before {
+			top: 15px;
+			left: -83px;
+			width: 200px;
+			background-color: var(--color-white);
+
+			@media (min-width: $screen-md-min) {
+				left: -392px;
+				width: 800px;
+			}
+		}
+	}
+}

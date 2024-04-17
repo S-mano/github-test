@@ -1,0 +1,52 @@
+// --------------------------------------------------
+// グローバル変数の宣言
+// --------------------------------------------------
+// 対応ブラウザ（ベンダープレフィックス）
+$legacy-support-for-ie6: false;
+$legacy-support-for-ie7: false;
+$legacy-support-for-ie8: true;
+$experimental-support-for-mozilla: true;
+$experimental-support-for-webkit: true;
+$support-for-original-webkit-gradients: true;
+$experimental-support-for-opera: true;
+$experimental-support-for-microsoft: true;
+$experimental-support-for-khtml: false;
+$experimental-support-for-svg: true; // OperaとIE9のグラデーションをSVGで対応
+$legacy-support-for-mozilla: true;
+
+// ブレークポイント定義（BootStrap3と連動）
+$screen-xs-min: 480px;
+$screen-sm-min: 768px;
+$screen-md-max: 991px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+// color,border,background-color
+$color-array: #fff #000 #ec0000 #999; // 順番（番号）でクラス名を生成
+$link-color-main: #00f; // リンクカラー
+$color-bdr: #dadada;
+$color-black: #{var(--color-dark)};
+$color-dark-gray: #{var(--color-dark-gray)};
+$color-red: #{var(--color-red)};
+$color-gray: #{var(--color-gray)};
+$color-white: #{var(--color-white)};
+
+// width,height
+$scale-px-array: 100 200 300 400 500 600 700 900;
+$scale-per-array: 10 20 30 40 50 60 70 80 90 100;
+
+// margin,padding
+$margin-px-array: 0 5 10 15 20 25 30 40 50 60 70 80 90 100;
+$margin-per-array: 10 20 30 40 50 60 70 80 90 100;
+$padding-px-array: 0 5 10 15 20 25 30 40 50 60 70 80 90 100;
+$padding-per-array: 10 20 30 40 50 60 70 80 90 100;
+$font-size-array: 32 40 50; // 8から30pxは初期値で生成済み;
+
+$border-px-array: 1 2 3 4 5 10;
+$border-radius-array: 4 8 10; // 角丸
+
+// Bootstrap用グリッドシステムの余白
+$gutter-array: 10 15 20;
+$ff-ja: "Noto Sans JP", sans-serif;
+$ff-en: "Akshar", sans-serif;
+$text-color: rgb(74 74 74) rgb(166 155 146) #d2cdc8 #4f4447 #87674f #d9c48e rgb(140 62 60);

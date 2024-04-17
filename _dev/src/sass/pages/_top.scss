@@ -1,0 +1,393 @@
+@use "../global" as *;
+
+/* KV message */
+.l-top-message-heading {
+	clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+	color: $color-gray;
+	letter-spacing: 5px;
+	background-position: 0;
+	background-clip: text;
+	background-size: 0;
+
+	// 見出し下のテキストに合わせて移動距離を設定
+	transform: translateX(18px);
+
+	@media (min-width: $screen-md-min) {
+		letter-spacing: 10px;
+		transform: translateX(20px);
+	}
+
+	.is-active & {
+		// 見出しアニメーション: 1.2秒 (テキスト部分は1.4秒後に発火)
+		animation-name: l-top-message-heading-display-sp, l-top-message-heading-position;
+		animation-duration: 0.6s, 0.4s;
+		animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1), linear;
+		animation-delay: 0s, 0.6s;
+		animation-fill-mode: forwards, forwards;
+
+		@media (min-width: $screen-md-min) {
+			animation-name: l-top-message-heading-display-pc, l-top-message-heading-position;
+		}
+	}
+}
+
+.l-top-message-paragraph {
+	// SP表示の時
+	& > div {
+		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+		transform: translateX(1em);
+
+		// PC表示の時はアニメーションを解除
+		@media (min-width: $screen-md-min) {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+			transform: translateX(0);
+		}
+	}
+
+	&.is-active > div {
+		// テキストアニメーション: 0.3秒 (2段落目以降は1行ごとに0.3秒ずつ遅延して動く)
+		animation-name: l-top-message-text-display;
+		animation-duration: 0.3s;
+		animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+		animation-fill-mode: forwards;
+
+		@for $i from 1 through 3 {
+			.is-active &:nth-of-type(#{$i}) {
+				animation-delay: 0.8s + 0.3s * $i;
+			}
+		}
+
+		@media (min-width: $screen-md-min) {
+			@for $i from 1 through 3 {
+				.is-active &:nth-of-type(#{$i}) {
+					animation-name: none;
+				}
+			}
+		}
+	}
+
+	// PC表示の時
+	@media (min-width: $screen-md-min) {
+		p {
+			clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+			transform: translateX(1em);
+		}
+
+		&.is-active p {
+			// テキストアニメーション: 0.3秒 (2段落目以降は1行ごとに0.3秒ずつ遅延して動く)
+			animation-name: l-top-message-text-display;
+			animation-duration: 0.3s;
+			animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+			animation-fill-mode: forwards;
+		}
+
+		// テキストアニメーション: 0.3秒 (2行目以降は1行ごとに0.3秒ずつ遅延して動く)
+		@for $i from 1 through 10 {
+			&.is-active p:nth-of-type(#{$i}) {
+				animation-delay: 0.8s + 0.3s * $i;
+			}
+		}
+	}
+}
+
+// 見出し表示アニメーション(sp/pc用で挙動を分割)
+@mixin l-top-message-heading-display($name, $start-spacing, $translate-x) {
+	@keyframes #{$name} {
+		from {
+			clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+			letter-spacing: $start-spacing;
+			background-size: 0;
+			transform: translateX($translate-x);
+		}
+
+		to {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+			letter-spacing: 0;
+			background-size: 300%;
+			transform: translateX(0);
+		}
+	}
+}
+
+@include l-top-message-heading-display("l-top-message-heading-display-sp", 5px, 18px);
+@include l-top-message-heading-display("l-top-message-heading-display-pc", 10px, 20px);
+
+// 見出し背景色のアニメーション
+@keyframes l-top-message-heading-position {
+	from {
+		color: transparent;
+
+		// TODO グラデーションの色について調整予定
+		background-image: linear-gradient(135deg, $color-gray 40%, #eb0000 45%, $color-red 50%, #eb0000 55%, $color-gray 60%);
+		background-position: 100%;
+	}
+
+	to {
+		color: $color-gray;
+
+		// TODO グラデーションの色について調整予定
+		background-image: linear-gradient(135deg, $color-gray 40%, #eb0000 45%, $color-red 50%, #eb0000 55%, $color-gray 60%);
+		background-position: 0%;
+	}
+}
+
+// 見出し表示アニメーション(sp/pc用で挙動を分割)
+@keyframes l-top-message-text-display {
+	from {
+		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+		transform: translateX(1em);
+	}
+
+	to {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+		transform: translateX(0);
+	}
+}
+
+/* solution */
+.l-top-solution {
+	opacity: 0;
+
+	// スクロールアニメーション
+	&.is-active {
+		animation: fadeInUp 0.3s ease-in-out forwards;
+	}
+}
+
+.l-top-solution-data-item {
+	opacity: 0;
+
+	// スクロールアニメーション
+	&.is-active {
+		animation: fadeInUp 0.3s ease-in-out forwards;
+	}
+}
+
+/* sn group company */
+.l-top-group_company {
+	box-sizing: content-box;
+	grid-template:
+		"head"
+		"content";
+
+	@media (min-width: $screen-md-min) {
+		grid-template: "head content" /4.8fr 5.2fr;
+	}
+
+	@media (min-width: 1280px) {
+		grid-template: "head content" /3.6fr 6.4fr;
+	}
+}
+
+.l-top-group_company-item {
+	width: calc((100% / 2) - (7px / 2));
+	opacity: 0;
+
+	@media (min-width: $screen-sm-min) {
+		width: calc((100% / 3) - (80px / 3));
+	}
+
+	// スクロールアニメーション
+	&.is-active {
+		animation: fadeInUp 0.3s ease-in-out forwards;
+
+		// sp以下の時は偶数番目のアニメーションを遅らせる
+		@media (max-width: $screen-sm-min) {
+			&:nth-child(even) {
+				animation-delay: 0.1s;
+			}
+		}
+
+		// sp以上の時は特定の順番のアニメーションを遅らせる
+		@media (min-width: $screen-sm-min) {
+			&:nth-child(3n-1) {
+				animation-delay: 0.1s;
+			}
+
+			&:nth-child(3n) {
+				animation-delay: 0.2s;
+			}
+		}
+	}
+}
+
+/* news */
+.l-top-news {
+	box-sizing: content-box;
+	grid-template:
+		"head"
+		"news"
+		"link";
+
+	@media (min-width: $screen-md-min) {
+		grid-template:
+			"head news"
+			"link news" / auto 1fr;
+	}
+}
+
+.l-top-branding-movie {
+	&-overlay {
+		z-index: 1;
+		display: grid;
+		place-content: center;
+		width: 100%;
+		height: 100%;
+		background-color: rgb(0 0 0 / 50%);
+	}
+
+	.video-js {
+		width: 100%;
+		height: 100%;
+		aspect-ratio: 16 / 9;
+
+		&.vjs-audio-only-mode .vjs-tech {
+			display: block;
+		}
+
+		.vjs-control {
+			z-index: 2;
+			background: var(--color-dark);
+		}
+	}
+}
+
+.l-top-far-wing {
+	&-mock {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 320 / 93;
+		background-image: url("/common/images/mock/far-wing.gif");
+		background-repeat: no-repeat;
+		background-size: contain;
+
+		&[data-area="solution"] {
+			@media (min-width: $screen-md-min) {
+				top: min(pxtovw(110px, pc), 110px);
+				left: min(pxtovw(-220px, pc), -220px);
+				width: calc(100% + 220px);
+			}
+		}
+
+		&[data-area="news"] {
+			top: min(pxtovw(-250px, pc), 250px);
+			left: min(pxtovw(50px, pc), 50px);
+			display: none;
+			width: calc(100% + 50px);
+
+			@media (min-width: $screen-md-min) {
+				display: block;
+			}
+		}
+	}
+
+	&-static-image {
+		width: 100%;
+		height: auto;
+		pointer-events: none;
+		background-repeat: no-repeat;
+		background-size: contain;
+
+		&[data-area="solution"] {
+			top: max(pxtovw(-20px, sp), -20px);
+			right: -1px;
+			left: unset;
+			max-width: min(pxtovw(86px, sp), 86px);
+			aspect-ratio: 86 / 166;
+			background-image: url("/common/images/mock/wing_solution.svg");
+
+			@media (min-width: $screen-md-min) {
+				top: min(pxtovw(52px, pc), 52px);
+				max-width: min(pxtovw(342px, pc), 342px);
+				aspect-ratio: 342 / 661;
+			}
+		}
+
+		&[data-area="news"] {
+			top: max(pxtovw(-300px, pc), -300px);
+			right: 0;
+			left: unset;
+			display: none;
+			max-width: min(pxtovw(308px, pc), 308px);
+			aspect-ratio: 308 / 661;
+			background-image: url("/common/images/mock/wing_news.svg");
+
+			@media (min-width: $screen-md-min) {
+				display: block;
+			}
+		}
+	}
+}
+
+.l-top-neer-wing {
+	&-mock {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 320 / 93;
+		background-image: url("/common/images/mock/neer-wing.gif");
+		background-repeat: no-repeat;
+		background-size: contain;
+
+		&[data-area="movie"] {
+			bottom: max(pxtovw(-258px, pc), -258px);
+			left: max(pxtovw(-470px, pc), -470px);
+			z-index: 10;
+			display: none;
+			width: calc(100% + min(pxtovw(470px, pc), 470px));
+
+			@media (min-width: $screen-md-min) {
+				display: block;
+			}
+		}
+
+		&[data-area="group_company"] {
+			background-image: url("/common/images/mock/far-wing.gif");
+
+			@media (min-width: $screen-md-min) {
+				top: min(pxtovw(-150px, pc), -150px);
+				left: max(pxtovw(-410px, pc), -410px);
+				width: calc(100% + min(pxtovw(410px, pc), 410px));
+				background-image: url("/common/images/mock/neer-wing.gif");
+			}
+		}
+	}
+
+	&-static-image {
+		width: 100%;
+		height: auto;
+		pointer-events: none;
+		background-repeat: no-repeat;
+		background-size: contain;
+
+		&[data-area="movie"] {
+			bottom: max(pxtovw(-50px, pc), -50px);
+			left: max(pxtovw(-110px, pc), -110px);
+			z-index: 10;
+			display: none;
+			max-width: min(pxtovw(176px, pc), 176px);
+			aspect-ratio: 176 / 284;
+			background-image: url("/common/images/mock/wing_branding-movie.svg");
+
+			@media (min-width: $screen-md-min) {
+				display: block;
+			}
+		}
+
+		&[data-area="group_company"] {
+			top: max(pxtovw(-2px, sp), -2px);
+			right: max(pxtovw(-26px, sp), -26px);
+			left: unset;
+			max-width: min(pxtovw(120px, sp), 120px);
+			aspect-ratio: 141 / 229;
+			background-image: url("/common/images/mock/wing_group-sp.svg");
+
+			@media (min-width: $screen-md-min) {
+				top: max(pxtovw(-303px, pc), -303px);
+				left: max(pxtovw(-4px, pc), -4px);
+				max-width: min(pxtovw(308px, pc), 308px);
+				aspect-ratio: 308 / 661;
+				background-image: url("/common/images/mock/wing_group.svg");
+			}
+		}
+	}
+}

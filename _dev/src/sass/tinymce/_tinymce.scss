@@ -1,0 +1,145 @@
+@use "../global" as *;
+@use "tinymce-default";
+
+// =====================================================
+// WordPress用TinyMCEのカスタマイズ（サイト最適化）
+// =====================================================
+
+.mce-content-body {
+	// --------------------------------------------------
+	// 見出し
+	// --------------------------------------------------
+	// 大見出し
+	// .mce-headline-1 {
+	//     @media (min-width: $screen-md-min) {
+	//     }
+	// }
+
+	// 中見出し
+	// .mce-headline-2 {
+	//     @media (min-width: $screen-md-min) {
+	//     }
+	// }
+
+	// 小見出し
+	// .mce-headline-3 {
+	//     @media (min-width: $screen-md-min) {
+	//     }
+	// }
+
+	// --------------------------------------------------
+	// ボタン
+	// --------------------------------------------------
+	.mce-button-1 {
+		display: inline-block;
+		padding: 5px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		color: #fff;
+		background-color: #333;
+		border-radius: 5px;
+
+		@media (min-width: $screen-md-min) {
+			margin-top: 40px;
+			margin-bottom: 40px;
+		}
+
+		&:hover {
+			text-decoration: none;
+			background-color: #ccc;
+		}
+	}
+
+	// --------------------------------------------------
+	// 強調文字
+	// --------------------------------------------------
+	.mce-strong-1 {
+		font-size: 16px;
+		font-weight: bold;
+
+		@media (min-width: $screen-md-min) {
+			font-size: 20px;
+		}
+	}
+
+	// --------------------------------------------------
+	// リスト
+	// --------------------------------------------------
+	ul {
+		li {
+			font-size: 14px;
+
+			@media (min-width: $screen-md-min) {
+				font-size: 15px;
+			}
+		}
+	}
+
+	ol {
+		li {
+			font-size: 14px;
+
+			@media (min-width: $screen-md-min) {
+				font-size: 15px;
+			}
+		}
+	}
+
+	// --------------------------------------------------
+	// テーブル
+	// --------------------------------------------------
+	table {
+		width: 100%;
+		border-spacing: 0;
+		border-collapse: collapse;
+
+		tr {
+			border-bottom: 1px solid #dcdcdc;
+
+			td {
+				padding: 5px;
+			}
+		}
+	}
+
+	dl {
+		width: 100%;
+		padding: 5px;
+		border-bottom: 1px solid #bdbdbd;
+
+		@media (min-width: $screen-md-min) {
+			display: table;
+		}
+
+		dt {
+			@media (min-width: $screen-md-min) {
+				display: table-cell;
+				width: 30%;
+			}
+		}
+
+		dd {
+			@media (min-width: $screen-md-min) {
+				display: table-cell;
+			}
+		}
+	}
+
+	// --------------------------------------------------
+	// iframeビデオ
+	// --------------------------------------------------
+	.box-movie {
+		position: relative;
+		width: 100%;
+		padding-bottom: 56.25%;
+		overflow: hidden;
+
+		iframe {
+			position: absolute;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			margin: auto;
+		}
+	}
+} // .mce-content-body

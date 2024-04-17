@@ -1,0 +1,65 @@
+@use "../global" as *;
+
+// ボックス用スタイル
+// クラス名：.box-xxx
+
+// --------------------------------------------------
+// デフォルトのボックス
+// --------------------------------------------------
+.box-default {
+	padding: 15px;
+	line-height: 1.5;
+	background-color: $color-white;
+	border-radius: 5px;
+
+	@media (min-width: $screen-md-min) {
+		padding: 30px;
+	}
+}
+
+// --------------------------------------------------
+// ボックス各色
+// --------------------------------------------------
+.box-black {
+	padding: 15px;
+	line-height: 1.5;
+	background-color: $color-black;
+	border-radius: 5px;
+
+	@media (min-width: $screen-md-min) {
+		padding: 30px;
+	}
+}
+
+.box-gray {
+	padding: 15px;
+	line-height: 1.5;
+	border-radius: 5px;
+
+	// background-color: $color-gray;
+	@media (min-width: $screen-md-min) {
+		padding: 30px;
+	}
+}
+
+.box-blue {
+	padding: 15px;
+	line-height: 1.5;
+	border-radius: 5px;
+
+	// background-color: $color-blue;
+	@media (min-width: $screen-md-min) {
+		padding: 30px;
+	}
+}
+
+.box-red {
+	padding: 15px;
+	line-height: 1.5;
+	border-radius: 5px;
+
+	// background-color: $color-red;
+	@media (min-width: $screen-md-min) {
+		padding: 30px;
+	}
+}

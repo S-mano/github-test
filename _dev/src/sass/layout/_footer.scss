@@ -1,0 +1,32 @@
+@use "../global" as *;
+
+// ==================================================
+// 基本レイアウト：フッター
+// ==================================================
+
+// --------------------------------------------------
+// ページ先頭へ戻るボタン
+// --------------------------------------------------
+// .l-pagetop-button {
+// }
+
+// --------------------------------------------------
+// フッター
+// --------------------------------------------------
+.l-footer-grid-layout {
+	grid-template-areas:
+		". . . . "
+		". nav nav."
+		". address toTop."
+		". policy policy .";
+	grid-template-columns: 24px minmax(0, 1fr) minmax(33px, auto) 24px;
+
+	@media (min-width: $screen-md-min) {
+		grid-template-areas:
+			". . . ."
+			". address nav toTop"
+			". policy policy .";
+		grid-template-rows: auto auto auto auto;
+		grid-template-columns: minmax(0, 10.9375vw) auto minmax(0, 1fr) minmax(0, 10.9375vw);
+	}
+}

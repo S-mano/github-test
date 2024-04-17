@@ -1,0 +1,15 @@
+// --------------------------------------------------
+// 各ファイル読み込み
+// --------------------------------------------------
+@use "../../node_modules/video.js/dist/video-js.css" as videojs;
+@use "tailwindcss/base" as twBase;
+@use "tailwindcss/utilities" as twUtilities;
+@use "tailwindcss/components" as twComponents;
+@use "base";
+@use "layout";
+@use "components";
+@use "pages";
+@use "tinymce";
+
+// マルチカラム用
+@use "bootstrap";

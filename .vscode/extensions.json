@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode", // prettier
+    "dbaeumer.vscode-eslint", // eslint
+    "stylelint.vscode-stylelint", // stylelint
+    "bradlc.vscode-tailwindcss", // Tailwind CSS IntelliSense
+    "editorconfig.editorconfig" // editorconfig
+  ]
+}

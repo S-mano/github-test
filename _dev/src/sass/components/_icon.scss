@@ -1,0 +1,24 @@
+@use "../global" as *;
+
+// ==================================================
+// コンポーネント：アイコン
+// ==================================================
+// --------------------------------------------------
+// ○○○
+// --------------------------------------------------
+
+@mixin icon-base {
+	display: inline-block;
+	flex-shrink: 0;
+}
+
+// 任意の要素にアイコンクラスとwidth・height・background-colorを指定することでアイコンを表示させる
+
+.icon-arrow {
+	@include icon-base;
+
+	mask-position: center center;
+	mask-size: contain;
+	mask-repeat: no-repeat;
+	mask-image: url("../images/share/icon/icon_arrow-right.svg");
+}

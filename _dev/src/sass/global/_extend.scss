@@ -1,0 +1,23 @@
+@use "./function" as *;
+
+// ==================================================
+// リスト
+// ==================================================
+// %list-basic {
+//     margin-bottom: 24px;
+//     list-style-type: none;
+
+//     li {
+//         margin-bottom: 16px;
+//         font-size: 14px;
+//         line-height: 1.5;
+
+//         @media (min-width: $screen-sm-min) {
+//             font-size: 16px;
+//         }
+
+//         &:last-of-type {
+//             margin-bottom: 0;
+//         }
+//     }
+// }

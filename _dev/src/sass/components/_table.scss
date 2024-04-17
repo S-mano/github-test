@@ -1,0 +1,82 @@
+@use "../global" as *;
+
+// ==================================================
+// コンポーネント：テーブル
+// ==================================================
+// --------------------------------------------------
+// デフォルト
+// --------------------------------------------------
+table {
+	width: 100%;
+	font-size: 14px;
+	line-height: 1.4;
+	word-break: break-word;
+	table-layout: fixed;
+	border-spacing: 0;
+	border-collapse: collapse;
+
+	@media (min-width: $screen-md-min) {
+		font-size: 16px;
+	}
+
+	tr {
+		td,
+		th {
+			padding: 10px;
+			line-height: 1.5;
+			vertical-align: middle;
+			border: 1px solid $color-bdr;
+
+			@media (min-width: $screen-md-min) {
+				padding: 10px 30px;
+			}
+		}
+
+		th {
+			color: #fff;
+			text-align: left;
+
+			@media (min-width: $screen-md-min) {
+				font-weight: 700;
+			}
+		}
+	}
+
+	tr:first-child {
+		th {
+			&:first-child {
+				border-top-left-radius: 10px;
+			}
+
+			&:last-child {
+				border-top-right-radius: 10px;
+			}
+		}
+	}
+
+	tr:last-child {
+		th:first-child {
+			border-bottom-left-radius: 10px;
+		}
+	}
+}
+
+.table-responsive {
+	body.mce-content-body & {
+		display: table;
+	}
+
+	@media (max-width: $screen-md-max) {
+		display: none;
+	}
+
+	&-sp {
+		@media (min-width: $screen-md-min) {
+			display: none;
+		}
+
+		.table-sp {
+			margin-top: 20px;
+		}
+	}
+}

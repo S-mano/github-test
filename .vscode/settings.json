@@ -1,0 +1,29 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit"
+  },
+  "eslint.format.enable": false,
+	"editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+	"[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+	"css.validate": false,
+  "scss.validate": false,
+	"stylelint.validate": ["css", "scss"],
+	"eslint.validate": [
+    "javascript"
+  ],
+  "editor.lineNumbers": "on",
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 140,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "npm.packageManager": "npm",
+}

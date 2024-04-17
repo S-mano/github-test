@@ -1,0 +1,157 @@
+@use "../global" as *;
+
+// ==================================================
+// コンポーネント：スケール
+// ==================================================
+// --------------------------------------------------
+// Width & Height
+// --------------------------------------------------
+// ピクセル値
+@each $n in $scale-px-array {
+	.w-#{$n} {
+		width: #{$n}px;
+	}
+	.h-#{$n} {
+		height: #{$n}px;
+	}
+
+	@media (min-width: $screen-xs-min) {
+		.w-#{$n}-xs {
+			width: #{$n}px;
+		}
+		.h-#{$n}-xs {
+			height: #{$n}px;
+		}
+	}
+
+	@media (min-width: $screen-sm-min) {
+		.w-#{$n}-sm {
+			width: #{$n}px;
+		}
+		.h-#{$n}-sm {
+			height: #{$n}px;
+		}
+	}
+
+	@media (min-width: $screen-md-min) {
+		.w-#{$n}-md {
+			width: #{$n}px;
+		}
+		.h-#{$n}-md {
+			height: #{$n}px;
+		}
+	}
+
+	@media (min-width: $screen-lg-min) {
+		.w-#{$n}-lg {
+			width: #{$n}px;
+		}
+		.h-#{$n}-lg {
+			height: #{$n}px;
+		}
+	}
+}
+
+// パーセント値
+@each $n in $scale-per-array {
+	.w-#{$n}per {
+		width: #{$n}#{"%"};
+	}
+	.h-#{$n}per {
+		height: #{$n}#{"%"};
+	}
+
+	@media (min-width: $screen-xs-min) {
+		.w-#{$n}per-xs {
+			width: #{$n}#{"%"};
+		}
+		.h-#{$n}per-xs {
+			height: #{$n}#{"%"};
+		}
+	}
+
+	@media (min-width: $screen-sm-min) {
+		.w-#{$n}per-sm {
+			width: #{$n}#{"%"};
+		}
+		.h-#{$n}per-sm {
+			height: #{$n}#{"%"};
+		}
+	}
+
+	@media (min-width: $screen-md-min) {
+		.w-#{$n}per-md {
+			width: #{$n}#{"%"};
+		}
+		.h-#{$n}per-md {
+			height: #{$n}#{"%"};
+		}
+	}
+
+	@media (min-width: $screen-lg-min) {
+		.w-#{$n}per-lg {
+			width: #{$n}#{"%"};
+		}
+		.h-#{$n}per-lg {
+			height: #{$n}#{"%"};
+		}
+	}
+}
+
+// --------------------------------------------------
+// Width & Height（auto）
+// --------------------------------------------------
+.w-a {
+	width: auto;
+}
+
+.h-a {
+	height: auto;
+}
+
+@media (min-width: $screen-xs-min) {
+	.w-a-xs {
+		width: auto;
+	}
+
+	.h-a-xs {
+		height: auto;
+	}
+}
+
+@media (min-width: $screen-sm-min) {
+	.w-a-sm {
+		width: auto;
+	}
+
+	.h-a-sm {
+		height: auto;
+	}
+}
+
+@media (min-width: $screen-md-min) {
+	.w-a-md {
+		width: auto;
+	}
+
+	.h-a-md {
+		height: auto;
+	}
+}
+
+@media (min-width: $screen-lg-min) {
+	.w-a-lg {
+		width: auto;
+	}
+
+	.h-a-lg {
+		height: auto;
+	}
+}
+
+// --------------------------------------------------
+// Max-Width
+// --------------------------------------------------
+.maw-100per {
+	max-width: 100%;
+}

@@ -1,0 +1,446 @@
+@use "../global" as *;
+
+// ==================================================
+// コンポーネント：スペース
+// ==================================================
+// --------------------------------------------------
+// Margin
+// --------------------------------------------------
+// ピクセル値
+@each $n in $margin-px-array {
+	.m-#{$n} {
+		margin: #{$n}px;
+	}
+	.mt-#{$n} {
+		margin-top: #{$n}px;
+	}
+	.mr-#{$n} {
+		margin-right: #{$n}px;
+	}
+	.mb-#{$n} {
+		margin-bottom: #{$n}px;
+	}
+	.ml-#{$n} {
+		margin-left: #{$n}px;
+	}
+
+	@media (min-width: $screen-xs-min) {
+		.m-#{$n}-xs {
+			margin: #{$n}px;
+		}
+		.mt-#{$n}-xs {
+			margin-top: #{$n}px;
+		}
+		.mr-#{$n}-xs {
+			margin-right: #{$n}px;
+		}
+		.mb-#{$n}-xs {
+			margin-bottom: #{$n}px;
+		}
+		.ml-#{$n}-xs {
+			margin-left: #{$n}px;
+		}
+	}
+
+	@media (min-width: $screen-sm-min) {
+		.m-#{$n}-sm {
+			margin: #{$n}px;
+		}
+		.mt-#{$n}-sm {
+			margin-top: #{$n}px;
+		}
+		.mr-#{$n}-sm {
+			margin-right: #{$n}px;
+		}
+		.mb-#{$n}-sm {
+			margin-bottom: #{$n}px;
+		}
+		.ml-#{$n}-sm {
+			margin-left: #{$n}px;
+		}
+	}
+
+	@media (min-width: $screen-md-min) {
+		.m-#{$n}-md {
+			margin: #{$n}px;
+		}
+		.mt-#{$n}-md {
+			margin-top: #{$n}px;
+		}
+		.mr-#{$n}-md {
+			margin-right: #{$n}px;
+		}
+		.mb-#{$n}-md {
+			margin-bottom: #{$n}px;
+		}
+		.ml-#{$n}-md {
+			margin-left: #{$n}px;
+		}
+	}
+
+	@media (min-width: $screen-lg-min) {
+		.m-#{$n}-lg {
+			margin: #{$n}px;
+		}
+		.mt-#{$n}-lg {
+			margin-top: #{$n}px;
+		}
+		.mr-#{$n}-lg {
+			margin-right: #{$n}px;
+		}
+		.mb-#{$n}-lg {
+			margin-bottom: #{$n}px;
+		}
+		.ml-#{$n}-lg {
+			margin-left: #{$n}px;
+		}
+	}
+}
+
+// パーセント値
+@each $n in $margin-per-array {
+	.m-#{$n}per {
+		margin: #{$n}#{"%"};
+	}
+	.mt-#{$n}per {
+		margin-top: #{$n}#{"%"};
+	}
+	.mr-#{$n}per {
+		margin-right: #{$n}#{"%"};
+	}
+	.mb-#{$n}per {
+		margin-bottom: #{$n}#{"%"};
+	}
+	.ml-#{$n}per {
+		margin-left: #{$n}#{"%"};
+	}
+
+	@media (min-width: $screen-xs-min) {
+		.m-#{$n}per-xs {
+			margin: #{$n}#{"%"};
+		}
+		.mt-#{$n}per-xs {
+			margin-top: #{$n}#{"%"};
+		}
+		.mr-#{$n}per-xs {
+			margin-right: #{$n}#{"%"};
+		}
+		.mb-#{$n}per-xs {
+			margin-bottom: #{$n}#{"%"};
+		}
+		.ml-#{$n}per-xs {
+			margin-left: #{$n}#{"%"};
+		}
+	}
+
+	@media (min-width: $screen-sm-min) {
+		.m-#{$n}per-sm {
+			margin: #{$n}#{"%"};
+		}
+		.mt-#{$n}per-sm {
+			margin-top: #{$n}#{"%"};
+		}
+		.mr-#{$n}per-sm {
+			margin-right: #{$n}#{"%"};
+		}
+		.mb-#{$n}per-sm {
+			margin-bottom: #{$n}#{"%"};
+		}
+		.ml-#{$n}per-sm {
+			margin-left: #{$n}#{"%"};
+		}
+	}
+
+	@media (min-width: $screen-md-min) {
+		.m-#{$n}per-md {
+			margin: #{$n}#{"%"};
+		}
+		.mt-#{$n}per-md {
+			margin-top: #{$n}#{"%"};
+		}
+		.mr-#{$n}per-md {
+			margin-right: #{$n}#{"%"};
+		}
+		.mb-#{$n}per-md {
+			margin-bottom: #{$n}#{"%"};
+		}
+		.ml-#{$n}per-md {
+			margin-left: #{$n}#{"%"};
+		}
+	}
+
+	@media (min-width: $screen-lg-min) {
+		.m-#{$n}per-lg {
+			margin: #{$n}#{"%"};
+		}
+		.mt-#{$n}per-lg {
+			margin-top: #{$n}#{"%"};
+		}
+		.mr-#{$n}per-lg {
+			margin-right: #{$n}#{"%"};
+		}
+		.mb-#{$n}per-lg {
+			margin-bottom: #{$n}#{"%"};
+		}
+		.ml-#{$n}per-lg {
+			margin-left: #{$n}#{"%"};
+		}
+	}
+}
+
+// --------------------------------------------------
+// Padding
+// --------------------------------------------------
+// ピクセル値
+@each $n in $padding-px-array {
+	.p-#{$n} {
+		padding: #{$n}px;
+	}
+	.pt-#{$n} {
+		padding-top: #{$n}px;
+	}
+	.pr-#{$n} {
+		padding-right: #{$n}px;
+	}
+	.pb-#{$n} {
+		padding-bottom: #{$n}px;
+	}
+	.pl-#{$n} {
+		padding-left: #{$n}px;
+	}
+
+	@media (min-width: $screen-xs-min) {
+		.p-#{$n}-xs {
+			padding: #{$n}px;
+		}
+		.pt-#{$n}-xs {
+			padding-top: #{$n}px;
+		}
+		.pr-#{$n}-xs {
+			padding-right: #{$n}px;
+		}
+		.pb-#{$n}-xs {
+			padding-bottom: #{$n}px;
+		}
+		.pl-#{$n}-xs {
+			padding-left: #{$n}px;
+		}
+	}
+
+	@media (min-width: $screen-sm-min) {
+		.p-#{$n}-sm {
+			padding: #{$n}px;
+		}
+		.pt-#{$n}-sm {
+			padding-top: #{$n}px;
+		}
+		.pr-#{$n}-sm {
+			padding-right: #{$n}px;
+		}
+		.pb-#{$n}-sm {
+			padding-bottom: #{$n}px;
+		}
+		.pl-#{$n}-sm {
+			padding-left: #{$n}px;
+		}
+	}
+
+	@media (min-width: $screen-md-min) {
+		.p-#{$n}-md {
+			padding: #{$n}px;
+		}
+		.pt-#{$n}-md {
+			padding-top: #{$n}px;
+		}
+		.pr-#{$n}-md {
+			padding-right: #{$n}px;
+		}
+		.pb-#{$n}-md {
+			padding-bottom: #{$n}px;
+		}
+		.pl-#{$n}-md {
+			padding-left: #{$n}px;
+		}
+	}
+
+	@media (min-width: $screen-lg-min) {
+		.p-#{$n}-lg {
+			padding: #{$n}px;
+		}
+		.pt-#{$n}-lg {
+			padding-top: #{$n}px;
+		}
+		.pr-#{$n}-lg {
+			padding-right: #{$n}px;
+		}
+		.pb-#{$n}-lg {
+			padding-bottom: #{$n}px;
+		}
+		.pl-#{$n}-lg {
+			padding-left: #{$n}px;
+		}
+	}
+}
+
+// パーセント値
+@each $n in $padding-per-array {
+	.p-#{$n}per {
+		padding: #{$n}#{"%"};
+	}
+	.pt-#{$n}per {
+		padding-top: #{$n}#{"%"};
+	}
+	.pr-#{$n}per {
+		padding-right: #{$n}#{"%"};
+	}
+	.pb-#{$n}per {
+		padding-bottom: #{$n}#{"%"};
+	}
+	.pl-#{$n}per {
+		padding-left: #{$n}#{"%"};
+	}
+
+	@media (min-width: $screen-xs-min) {
+		.p-#{$n}per-xs {
+			padding: #{$n}#{"%"};
+		}
+		.pt-#{$n}per-xs {
+			padding-top: #{$n}#{"%"};
+		}
+		.pr-#{$n}per-xs {
+			padding-right: #{$n}#{"%"};
+		}
+		.pb-#{$n}per-xs {
+			padding-bottom: #{$n}#{"%"};
+		}
+		.pl-#{$n}per-xs {
+			padding-left: #{$n}#{"%"};
+		}
+	}
+
+	@media (min-width: $screen-sm-min) {
+		.p-#{$n}per-sm {
+			padding: #{$n}#{"%"};
+		}
+		.pt-#{$n}per-sm {
+			padding-top: #{$n}#{"%"};
+		}
+		.pr-#{$n}per-sm {
+			padding-right: #{$n}#{"%"};
+		}
+		.pb-#{$n}per-sm {
+			padding-bottom: #{$n}#{"%"};
+		}
+		.pl-#{$n}per-sm {
+			padding-left: #{$n}#{"%"};
+		}
+	}
+
+	@media (min-width: $screen-md-min) {
+		.p-#{$n}per-md {
+			padding: #{$n}#{"%"};
+		}
+		.pt-#{$n}per-md {
+			padding-top: #{$n}#{"%"};
+		}
+		.pr-#{$n}per-md {
+			padding-right: #{$n}#{"%"};
+		}
+		.pb-#{$n}per-md {
+			padding-bottom: #{$n}#{"%"};
+		}
+		.pl-#{$n}per-md {
+			padding-left: #{$n}#{"%"};
+		}
+	}
+
+	@media (min-width: $screen-lg-min) {
+		.p-#{$n}per-lg {
+			padding: #{$n}#{"%"};
+		}
+		.pt-#{$n}per-lg {
+			padding-top: #{$n}#{"%"};
+		}
+		.pr-#{$n}per-lg {
+			padding-right: #{$n}#{"%"};
+		}
+		.pb-#{$n}per-lg {
+			padding-bottom: #{$n}#{"%"};
+		}
+		.pl-#{$n}per-lg {
+			padding-left: #{$n}#{"%"};
+		}
+	}
+}
+
+// --------------------------------------------------
+// margin padding auto
+// --------------------------------------------------
+
+.m-a {
+	margin: auto;
+}
+
+.ml-a {
+	margin-left: auto;
+}
+
+.mr-a {
+	margin-right: auto;
+}
+
+@media (min-width: $screen-xs-min) {
+	.m-a-xs {
+		margin: auto;
+	}
+
+	.ml-a-xs {
+		margin-left: auto;
+	}
+
+	.mr-a-xs {
+		margin-right: auto;
+	}
+}
+
+@media (min-width: $screen-sm-min) {
+	.m-a-sm {
+		margin: auto;
+	}
+
+	.ml-a-sm {
+		margin-left: auto;
+	}
+
+	.mr-a-sm {
+		margin-right: auto;
+	}
+}
+
+@media (min-width: $screen-md-min) {
+	.m-a-md {
+		margin: auto;
+	}
+
+	.ml-a-md {
+		margin-left: auto;
+	}
+
+	.mr-a-md {
+		margin-right: auto;
+	}
+}
+
+@media (min-width: $screen-lg-min) {
+	.m-a-lg {
+		margin: auto;
+	}
+
+	.ml-a-lg {
+		margin-left: auto;
+	}
+
+	.mr-a-lg {
+		margin-right: auto;
+	}
+}

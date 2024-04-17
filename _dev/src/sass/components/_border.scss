@@ -1,0 +1,204 @@
+@use "../global" as *;
+
+// ==================================================
+// コンポーネント：ボーダー
+// ==================================================
+// --------------------------------------------------
+// Border Width
+// --------------------------------------------------
+
+// ピクセル値
+@each $n in $border-px-array {
+	.bdw-#{$n} {
+		border-width: #{$n}px;
+	}
+	.bdtw-#{$n} {
+		border-top-width: #{$n}px;
+	}
+	.bdrw-#{$n} {
+		border-right-width: #{$n}px;
+	}
+	.bdbw-#{$n} {
+		border-bottom-width: #{$n}px;
+	}
+	.bdlw-#{$n} {
+		border-left-width: #{$n}px;
+	}
+
+	@media (min-width: $screen-xs-min) {
+		.bdw-#{$n}-xs {
+			border-width: #{$n}px;
+		}
+		.bdtw-#{$n}-xs {
+			border-top-width: #{$n}px;
+		}
+		.bdrw-#{$n}-xs {
+			border-right-width: #{$n}px;
+		}
+		.bdbw-#{$n}-xs {
+			border-bottom-width: #{$n}px;
+		}
+		.bdlw-#{$n}-xs {
+			border-left-width: #{$n}px;
+		}
+	}
+
+	@media (min-width: $screen-sm-min) {
+		.bdw-#{$n}-sm {
+			border-width: #{$n}px;
+		}
+		.bdtw-#{$n}-sm {
+			border-top-width: #{$n}px;
+		}
+		.bdrw-#{$n}-sm {
+			border-right-width: #{$n}px;
+		}
+		.bdbw-#{$n}-sm {
+			border-bottom-width: #{$n}px;
+		}
+		.bdlw-#{$n}-sm {
+			border-left-width: #{$n}px;
+		}
+	}
+
+	@media (min-width: $screen-md-min) {
+		.bdw-#{$n}-md {
+			border-width: #{$n}px;
+		}
+		.bdtw-#{$n}-md {
+			border-top-width: #{$n}px;
+		}
+		.bdrw-#{$n}-md {
+			border-right-width: #{$n}px;
+		}
+		.bdbw-#{$n}-md {
+			border-bottom-width: #{$n}px;
+		}
+		.bdlw-#{$n}-md {
+			border-left-width: #{$n}px;
+		}
+	}
+
+	@media (min-width: $screen-lg-min) {
+		.bdw-#{$n}-lg {
+			border-width: #{$n}px;
+		}
+		.bdtw-#{$n}-lg {
+			border-top-width: #{$n}px;
+		}
+		.bdrw-#{$n}-lg {
+			border-right-width: #{$n}px;
+		}
+		.bdbw-#{$n}-lg {
+			border-bottom-width: #{$n}px;
+		}
+		.bdlw-#{$n}-lg {
+			border-left-width: #{$n}px;
+		}
+	}
+}
+
+// --------------------------------------------------
+// Border style
+// --------------------------------------------------
+
+.bds-s {
+	border-style: solid;
+}
+
+.bds-ds {
+	border-style: dashed;
+}
+
+.bds-dt {
+	border-style: dotted;
+}
+
+.bds-n {
+	border-style: none;
+}
+
+@media (min-width: $screen-xs-min) {
+	.bds-s-xs {
+		border-style: solid;
+	}
+
+	.bds-ds-xs {
+		border-style: dashed;
+	}
+
+	.bds-dt-xs {
+		border-style: dotted;
+	}
+
+	.bds-n-xs {
+		border-style: none;
+	}
+}
+
+@media (min-width: $screen-sm-min) {
+	.bds-s-sm {
+		border-style: solid;
+	}
+
+	.bds-ds-sm {
+		border-style: dashed;
+	}
+
+	.bds-dt-sm {
+		border-style: dotted;
+	}
+
+	.bds-n-sm {
+		border-style: none;
+	}
+}
+
+@media (min-width: $screen-md-min) {
+	.bds-s-md {
+		border-style: solid;
+	}
+
+	.bds-ds-md {
+		border-style: dashed;
+	}
+
+	.bds-dt-md {
+		border-style: dotted;
+	}
+
+	.bds-n-md {
+		border-style: none;
+	}
+}
+
+@media (min-width: $screen-lg-min) {
+	.bds-s-lg {
+		border-style: solid;
+	}
+
+	.bds-ds-lg {
+		border-style: dashed;
+	}
+
+	.bds-dt-lg {
+		border-style: dotted;
+	}
+
+	.bds-n-lg {
+		border-style: none;
+	}
+}
+
+// --------------------------------------------------
+// 角丸
+// --------------------------------------------------
+@each $n in $border-radius-array {
+	.bdra-#{$n} {
+		border-radius: #{$n}px;
+	}
+}
+
+.bdra-circle {
+	border-radius: 50%;
+}
