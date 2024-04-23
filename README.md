@@ -13,10 +13,13 @@ mock ページでの実装にあたり、環境構築方法や注意事項をま
 
 1. エディター： VSCode
 2. 拡張機能(Linter 系)
+
    - EditorConfig：https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
    - Prettier：https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
    - ESLint：https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
    - StyleLint：https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint
+
+3. Node.js v18.15.0
 
 ### ページの表示
 
@@ -38,7 +41,8 @@ Node.js と npm を使用して簡易的な web サーバーを立てていま�
 
 上記コマンドで自動 watch が行われ、scss・js ファイルを上書きすると自動的にコンパイル、ミニファイが実行されます。<br>
 
-- scss の場合： \_dev/src/sass/pages/\_top.scss などの scss ファイルを上書き保存する
+- scss の場合： \_dev/src/sass/pages/\_top.scss などの scss ファイルを上書き保存する<br>
+  (トップページで css を追加したい場合は、クラス名の接頭語に「.l-top-」を追加してください)
 - javascript の場合：\_dev/src/js/page/top.js などの js ファイルを上書き保存する<br>
   (js ファイルを追加した場合、\_dev/webpack.config.js の 98 行目付近に entry プロパティがあるので、そちらにミニファイさせたい js ファイルのパスを追加してください)
 
