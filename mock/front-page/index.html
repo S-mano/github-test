@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://www.facebook.com/2008/fbml">
 
 <head>
 	<meta charset="UTF-8">
@@ -12,7 +12,7 @@
 	<meta property='og:type' content='website'>
 	<meta property='og:title' content='wordpress'>
 	<meta property='og:image' content=''>
-	<meta property="og:url" content="http://symba_v2.localhost">
+	<meta property="og:url" content="">
 	<meta name="viewport"
 		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0,user-scalable=yes">
 	<meta name="format-detection" content="telephone=no">
@@ -26,8 +26,6 @@
 
 	<!-- IE11 polyfill -->
 	<script async="" src="/common/lib/picturefill/picturefill.min.js"></script>
-
-	<meta name='robots' content='max-image-preview:large' />
 
 	<!-- web font loader-->
 	<!-- <script defer>
@@ -50,7 +48,7 @@
 </head>
 
 
-<body id="body" class="is-pc is-top">
+<body id="body" class="is-pc is-top ">
 	<header
 		class="js-header [:where(&)_a]:tw-text-current tw-fixed tw-grid tw-w-full [&_a]:tw-no-underline [&_ul]:tw-list-none [&_img]:tw-block [&_img]:tw-h-auto tw-z-[--z-index-header] tw-min-w-320ptr tw-bg-white">
 		<nav
@@ -174,7 +172,7 @@
 						data-button="dark-gray">
 						<span class="tw-tracking-medium tw-font-normal tw-leading-[1.083333] ~md:tw-~text-18ptr/24ptr"
 							lang="en">CONTACT</span>
-						<span class="tw-tracking-wider ~md:tw-~text-12ptr/16ptr">お問合せ</span>
+						<span class="tw-tracking-wider ~md:tw-~text-12ptr/16ptr">お問い合せ</span>
 					</a>
 				</li>
 				<li>
@@ -203,6 +201,7 @@
 
 	<main class="tw-bg-white">
 
+		<!-- KVと企業メッセージ -->
 		<!-- KVと企業メッセージ -->
 		<section>
 			<!-- KV -->
@@ -294,8 +293,8 @@
 					</div>
 				</div>
 				<div class="[grid-row:1] [grid-column:1/-1]">
-					<video id="js-video"
-						class="video-js aspect-video tw-h-full tw-w-full [#js-video&_.vjs-big-play-button]:tw-hidden">
+					<video id="js-video" class="video-js aspect-video tw-h-full tw-w-full
+    [#js-video&_.vjs-big-play-button]:tw-hidden">
 						<source src="/common/video/top-symba.mp4" type="video/mp4" />
 					</video>
 				</div>
@@ -440,49 +439,68 @@
 				</h2>
 				<div
 					class="[grid-area:content] tw-flex tw-flex-row tw-flex-wrap tw-gap-x-[7px] tw-gap-y-10 sm:tw-gap-10 tw-justify-start">
-					<div class="l-top-group_company-item js-scroll-animation">
-						<img src="/common/images/share/logo/logo_anshin.png" alt="株式会社あんしん">
-					</div>
+					<a href="https://anshin.symba.jp/" class="l-top-group_company-item js-scroll-animation tw-group"
+						target="_blank">
+						<img class="[transition:0.2s_transform_ease-in-out] group-hover:tw-scale-[1.15]"
+							src="/common/images/share/logo/logo_anshin.png" alt="株式会社あんしん">
+					</a>
 
-					<div class="l-top-group_company-item js-scroll-animation">
-						<img src="/common/images/share/logo/logo_oat.png" alt="沖縄空輸株式会社">
-					</div>
+					<a href="https://oat.symba.jp/" class="l-top-group_company-item js-scroll-animation tw-group"
+						target="_blank">
+						<img class="[transition:0.2s_transform_ease-in-out] group-hover:tw-scale-[1.15]"
+							src="/common/images/share/logo/logo_oat.png" alt="沖縄空輸株式会社">
+					</a>
 
-					<div class="l-top-group_company-item js-scroll-animation">
-						<img src="/common/images/share/logo/logo_okinawakuuyu.png" alt="沖縄海陸物流株式会社">
-					</div>
+					<a href="" class="l-top-group_company-item js-scroll-animation tw-group" target="_blank">
+						<img class="[transition:0.2s_transform_ease-in-out] group-hover:tw-scale-[1.15]"
+							src="/common/images/share/logo/logo_okinawakuuyu.png" alt="沖縄海陸物流株式会社">
+					</a>
 
-					<div class="l-top-group_company-item js-scroll-animation">
-						<img src="/common/images/share/logo/logo_senden.png" alt="株式会社宣伝">
-					</div>
+					<a href="https://senden.symba.jp/" class="l-top-group_company-item js-scroll-animation tw-group"
+						target="_blank">
+						<img class="[transition:0.2s_transform_ease-in-out] group-hover:tw-scale-[1.15]"
+							src="/common/images/share/logo/logo_senden.png" alt="株式会社宣伝">
+					</a>
 
-					<div class="l-top-group_company-item js-scroll-animation">
-						<img src="/common/images/share/logo/logo_oco.png" alt="株式会社オー・シ・ーオー">
-					</div>
+					<a href="https://oco.symba.jp/" class="l-top-group_company-item js-scroll-animation tw-group"
+						target="_blank">
+						<img class="[transition:0.2s_transform_ease-in-out] group-hover:tw-scale-[1.15]"
+							src="/common/images/share/logo/logo_oco.png" alt="株式会社オー・シ・ーオー">
+					</a>
 
-					<div class="l-top-group_company-item js-scroll-animation">
-						<img src="/common/images/share/logo/logo_shops.png" alt="株式会社ショップス">
-					</div>
+					<a href="https://shops.symba.jp/" class="l-top-group_company-item js-scroll-animation tw-group"
+						target="_blank">
+						<img class="[transition:0.2s_transform_ease-in-out] group-hover:tw-scale-[1.15]"
+							src="/common/images/share/logo/logo_shops.png" alt="株式会社ショップス">
+					</a>
 
-					<div class="l-top-group_company-item js-scroll-animation">
-						<img src="/common/images/share/logo/logo_prolabo.png" alt="株式会社プロラボ琉球">
-					</div>
+					<a href="https://prolabo-ryukyu.jp/" class="l-top-group_company-item js-scroll-animation tw-group"
+						target="_blank">
+						<img class="[transition:0.2s_transform_ease-in-out] group-hover:tw-scale-[1.15]"
+							src="/common/images/share/logo/logo_prolabo.png" alt="株式会社プロラボ琉球">
+					</a>
 
-					<div class="l-top-group_company-item js-scroll-animation">
-						<img src="/common/images/share/logo/logo_tiidakankou.png" alt="てぃーだ観光株式会社">
-					</div>
+					<a href="https://tiida-kanko.com/" class="l-top-group_company-item js-scroll-animation tw-group"
+						target="_blank">
+						<img class="[transition:0.2s_transform_ease-in-out] group-hover:tw-scale-[1.15]"
+							src="/common/images/share/logo/logo_tiidakankou.png" alt="てぃーだ観光株式会社">
+					</a>
 
-					<div class="l-top-group_company-item js-scroll-animation">
-						<img src="/common/images/share/logo/logo_miyasu.png" alt="株式会社美安タクシー">
-					</div>
+					<a href="" class="l-top-group_company-item js-scroll-animation tw-group" target="_blank">
+						<img class="[transition:0.2s_transform_ease-in-out] group-hover:tw-scale-[1.15]"
+							src="/common/images/share/logo/logo_miyasu.png" alt="株式会社美安タクシー">
+					</a>
 
-					<div class="l-top-group_company-item js-scroll-animation">
-						<img src="/common/images/share/logo/logo_clair.png" alt="グループ会社">
-					</div>
+					<a href="" class="l-top-group_company-item js-scroll-animation tw-group" target="_blank">
+						<img class="[transition:0.2s_transform_ease-in-out] group-hover:tw-scale-[1.15]"
+							src="/common/images/share/logo/logo_clair.png" alt="グループ会社">
+					</a>
 
-					<div class="l-top-group_company-item js-scroll-animation">
-						<img src="/common/images/share/logo/logo_syaryoukan.png" alt="株式会社車輌館">
-					</div>
+					<a href="https://syaryokan.symba.jp/" class="l-top-group_company-item js-scroll-animation tw-group"
+						target="_blank">
+						<img class="[transition:0.2s_transform_ease-in-out] group-hover:tw-scale-[1.15]"
+							src="/common/images/share/logo/logo_syaryoukan.png" alt="株式会社車輌館">
+					</a>
 				</div>
 			</div>
 		</section>
@@ -695,7 +713,21 @@
 				</li>
 			</ul>
 		</div>
-
+		<!-- コンタクト -->
+		<!-- <dl class="tw-place-self-center [grid-area:contact] md:tw-place-self-start">
+		<dt lang="en">
+			<a href="/contact" class="md:~lg/pc:tw-~text-58ptr/64ptr tw-group tw-inline-flex tw-items-center tw-gap-4 xxs:tw-text-64ptr tw-text-50ptr md:tw-leading-[90px]">
+				CONTACT
+				<span class="tw-inline-grid tw-place-items-center tw-rounded-full xxs:data-[size='large']:tw-size-63ptr data-[size='large']:tw-size-40ptr data-[size='small']:tw-size-16ptr data-[bg-color='transparent']:tw-bg-transparent data-[bg-color='white']:tw-bg-white data-[bg-color='transparent']:[border:1px_solid_var(--color-white)]" data-size="large" data-bg-color="transparent">
+					<span class="tw-h-[var(--arrow-height,theme('height.6ptr'))] tw-w-[var(--arrow-width,theme('width.8ptr'))] tw-transition-transform tw-duration-300 tw-mask-icon [--arrow-height:7px] [--arrow-width:9px] [--mask-icon:url('../../common/images/share/icon/icon_arrow-right.svg')] group-hover:tw-translate-x-2 data-[arrow-color='black']:tw-bg-black data-[arrow-color='white']:tw-bg-white" data-arrow-color="white"></span>
+				</span>
+			</a>
+		</dt>
+		<dd class="tw-leading-medium xxs:tw-text-15ptr ~min-[20rem]/xxs:tw-~text-12ptr/14ptr">
+			サービスについてのご相談・ご質問など、<br aria-hidden="true" />
+			お気軽にお問い合わせください。
+		</dd>
+	</dl> -->
 		<!-- ナビゲーション -->
 		<nav
 			class="md:~lg/pc:tw-~ml-40ptr/80ptr md:~lg/pc:tw-~gap-24ptr/40ptr tw-gap-y-10 tw-mx-auto tw-grid [grid-area:nav] md:tw-w-[calc(100%-clamp(2.5rem,-1.67rem+5.56vw,5rem))] md:tw-justify-between md:[grid-template-columns:repeat(3,minmax(0,auto))] lg:[grid-template-columns:repeat(5,minmax(0,auto))] maxMd:tw-w-full maxMd:tw-max-w-400ptr">
@@ -844,7 +876,7 @@
 		</div>
 	</footer>
 	<script src='/common/lib/jquery-3.7.1.min.js?ver=1.0' id='jquery-js'></script>
-	<script src='/common/js/common.min.js?ver=1.0' id='ri_common-js'></script>
+	<script src='/common/js/common.min.js?ver=1.1' id='ri_common-js'></script>
 	<script src="/common/js/pages/top.min.js?ver=1.0" defer></script>
 	<script src="/common/lib/numerator/jquery-numerator.js?ver=1.0" defer></script>
 	<script src="/common/lib/video/video.min.js?ver=1.0" defer></script>

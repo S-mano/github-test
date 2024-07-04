@@ -1,0 +1,32 @@
+{
+  "extends": ["eslint:recommended"],
+  "plugins": [],
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jquery": true,
+    "node": true
+  },
+  "globals": {},
+  "rules": {
+    "default-case": "error",
+    "default-case-last": "error",
+    "eqeqeq": "warn",
+    "no-undef": "warn",
+    "no-unneeded-ternary": "warn",
+    "no-var": "warn",
+    "prefer-const": "warn",
+    "prefer-template": "warn",
+    "quotes": ["warn", "single"],
+    "semi": ["error", "always"],
+    "space-unary-ops": "error",
+
+    // console.errorを許容する
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    // 変数名はキャメルケースにすること(プロパティ名を除く)
+    "camelcase": ["error", { "properties": "never" }]
+  }
+}

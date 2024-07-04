@@ -1,0 +1,13 @@
+@use "../global" as *;
+
+// ==================================================
+// Container
+// ==================================================
+
+.main-container {
+	padding-top: var(--sp-header-height);
+
+	@media (min-width: $screen-md-min) {
+		padding-top: var(--pc-header-height);
+	}
+}

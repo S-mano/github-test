@@ -8,7 +8,45 @@
 // --------------------------------------------------
 
 // h1見出し
-// .heading-1 {}
+.heading-1 {
+	display: inline-block;
+	font-weight: 300;
+	color: var(--color-dark);
+
+	&-en {
+		display: block;
+		font-size: 80px;
+		line-height: 1;
+
+		@media (min-width: $screen-md-min) {
+			font-size: 120px;
+			line-height: 1.1;
+		}
+	}
+
+	&-ja {
+		display: flex;
+		gap: 8px;
+		align-items: center;
+		margin-top: 0;
+		font-size: 16px;
+		font-weight: 700;
+		letter-spacing: 1.6px;
+
+		@media (min-width: $screen-md-min) {
+			margin-top: -5px;
+		}
+
+		&::before {
+			display: block;
+			width: 8px;
+			height: 8px;
+			content: "";
+			background-color: var(--color-red);
+			transform: rotate(45deg);
+		}
+	}
+}
 
 // h2見出し
 // .heading-2 {}

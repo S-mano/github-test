@@ -20,11 +20,11 @@ $(function () {
 	//=======================================================
 
 	// solution datalist用
-	const observer_solution_target = document.querySelectorAll('.js-scroll-animation-count-up');
+	const observerSolutionTarget = document.querySelectorAll('.js-scroll-animation-count-up');
 
 	// importしたobserveAndActivateを実行
-	if (observer_solution_target.length > 0) {
-		observeAndActivate(observer_solution_target, dataListCountUp);
+	if (observerSolutionTarget.length > 0) {
+		observeAndActivate(observerSolutionTarget, dataListCountUp);
 	}
 
 	//=======================================================

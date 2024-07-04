@@ -3,4 +3,45 @@
 // ==================================================
 // 基本レイアウト：パンくずリスト
 // ==================================================
-// .l-breadcrumb {}
+.l-breadcrumb {
+	padding: 0 16px;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 1.4;
+	color: var(--color-dark-gray);
+	letter-spacing: 0.36px;
+	background-color: var(--color-light-gray);
+
+	a {
+		color: var(--color-gray);
+
+		&:any-link {
+			color: var(--color-dark-gray);
+			text-decoration: underline;
+		}
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	ul {
+		display: flex;
+		gap: 8px;
+		align-items: center;
+		max-width: 1000px;
+		padding: 24px 0;
+		margin: 80px auto 0;
+
+		& > * + * {
+			display: flex;
+			gap: 8px;
+			align-items: center;
+
+			&::before {
+				color: var(--color-dark-gray);
+				content: "/";
+			}
+		}
+	}
+}

@@ -99,6 +99,7 @@ const jsConfig = {
 		'js/common': ['./src/js/common.js'],
 		'js/tinymce-picture': ['./src/js/tinymce-picture.js'],
 		'js/pages/top': ['./src/js/page/top.js'],
+		'js/pages/contact': ['./src/js/page/contact.js'],
 	},
   output: {
     filename: '[name].min.js',

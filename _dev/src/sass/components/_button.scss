@@ -6,12 +6,118 @@
 // --------------------------------------------------
 // ボタンジェネレーター
 // --------------------------------------------------
+%button-hover-base {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	content: "";
+	background-color: var(--button-hover-color, var(--color-gray));
+	transition-timing-function: var(--ease-out-cubic);
+	transition-duration: 200ms;
+	transition-property: transform;
+	transform: scaleX(0);
+	transform-origin: var(--from-transform-origin, 100% 50%);
+}
+
+%button-hover {
+	@media (hover: hover) and (pointer: fine) {
+		transition-timing-function: var(--ease-inout-cubic);
+		transition-duration: 150ms;
+		transform: scaleX(100%);
+		transform-origin: var(--to-transform-origin, 0% 50%);
+	}
+}
+
 // ベース
 %button-base {
-	display: inline-block;
-	padding: 5px;
-	line-height: 1.25;
-	text-align: center;
+	position: relative;
+	z-index: 1;
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	justify-content: center;
+	padding: 16px 24px 16px 32px;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.4;
+	letter-spacing: 1.5px;
+	cursor: pointer;
+	border: 0;
+	transition: 0.2s all var(--ease-inout-cubic);
+
+	@media (min-width: $screen-xs-min) {
+		font-size: 20px;
+	}
+
+	input {
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+		border: 0;
+		opacity: 0;
+	}
+
+	a {
+		color: var(--color-white);
+	}
+
+	&[data-bg-color="black"] {
+		color: var(--color-white);
+		background-color: var(--color-dark-gray);
+	}
+
+	&[data-bg-color="white"] {
+		color: var(--color-dark-gray);
+		background-color: var(--color-white);
+		border: 1px solid var(--color-dark-gray);
+	}
+
+	&:has(:disabled) {
+		// TODO: JSでdisabled属性を付与した際にスタイルを変更する
+		pointer-events: none;
+		background-color: var(--color-medium-gray);
+
+		[data-arrow-color] {
+			background-color: var(--color-medium-gray);
+		}
+	}
+
+	&[data-direction="left"] {
+		flex-direction: row-reverse;
+
+		@media (min-width: $screen-md-min) {
+			flex-direction: row;
+			padding: 16px 24px 16px 32px;
+
+			--from-transform-origin: 0% 50%;
+			--to-transform-origin: 100% 50%;
+		}
+	}
+
+	&.hover-none {
+		&::before {
+			display: none;
+		}
+
+		&:hover::before {
+			display: none;
+		}
+	}
+
+	&::before {
+		@extend %button-hover-base;
+	}
+
+	&:hover::before {
+		@extend %button-hover;
+	}
 }
 
 @mixin button-base-generator($bg-color, $color, $bg-hover) {
@@ -38,7 +144,21 @@
 	}
 }
 
-// 出力
-// .button-size-color {
-//     @include button-base-generator($backgrond_color-blue, $text_color-white);
-// }
+// --------------------------------------------------
+// primary
+// --------------------------------------------------
+
+.button-mce-primary {
+	@extend %button-base;
+
+	&.size-small {
+		padding: 12px 16px;
+		font-size: 14px;
+	}
+}
+
+.button-mce-secondary {
+	--button-hover-color: var(--color-medium-gray);
+
+	@extend %button-base;
+}

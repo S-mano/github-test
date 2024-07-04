@@ -1,0 +1,60 @@
+@use "../global" as *;
+
+// ==================================================
+// 基本レイアウト：コンタクト
+// ==================================================
+.l-contact {
+	font-feature-settings: "palt";
+
+	&-description {
+		line-height: 1.75;
+		letter-spacing: 2.2px;
+	}
+
+	dt {
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 1.4;
+	}
+
+	&-confirm {
+		dt {
+			font-size: 16px;
+
+			@media (min-width: $screen-md-min) {
+				font-size: 18px;
+			}
+		}
+	}
+
+	&-confirm {
+		&-list {
+			dd {
+				font-size: 16px;
+				font-weight: 500;
+				line-height: 1.4;
+
+				@media (min-width: $screen-md-min) {
+					font-size: 18px;
+				}
+			}
+
+			> * + * {
+				padding-top: 32px;
+				margin-top: 32px;
+				border-top: 1px solid var(--color-medium-gray);
+			}
+
+			& > :last-child {
+				padding-bottom: 32px;
+				border-bottom: 1px solid var(--color-medium-gray);
+			}
+		}
+
+		&-textarea {
+			dd {
+				line-height: 1.8;
+			}
+		}
+	}
+}

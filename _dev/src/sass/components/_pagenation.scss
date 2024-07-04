@@ -1,0 +1,88 @@
+@use "../global" as *;
+
+// ==================================================
+// コンポーネント：ページネーション
+// ==================================================
+.pagination {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	justify-content: space-between;
+
+	@media (min-width: $screen-xs-min) {
+		justify-content: flex-end;
+	}
+}
+
+.pagination-button {
+	display: flex;
+	flex-shrink: 0;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+	background: var(--color-dark);
+	border-radius: 50%;
+	transition: background-color 0.3s;
+
+	@media (min-width: $screen-md-min) {
+		width: 40px;
+		height: 40px;
+	}
+
+	&::before {
+		display: block;
+		width: 35%;
+		height: 35%;
+		content: "";
+		background-color: var(--color-white);
+		mask: url("../images/share/icon/icon_arrow-right.svg") center center / contain no-repeat;
+	}
+
+	&.prev::before {
+		transform: rotate(180deg);
+	}
+
+	&:not(:disabled):hover {
+		@media (hover: hover) {
+			background-color: var(--color-dark-gray);
+		}
+	}
+
+	// disabled
+	&:disabled {
+		cursor: not-allowed;
+		background-color: var(--color-medium-gray);
+		opacity: 0.4;
+	}
+}
+
+// .pagination-select-wrap {
+
+// }
+
+.pagination-select {
+	--select-width: 94px;
+	--icon-width: 10px;
+
+	max-width: var(--select-width);
+	padding: 10px 26px 7px 24px;
+	font-family: $ff-en;
+	font-size: 18px;
+	font-weight: 400;
+	color: var(--color-dark-gray);
+	text-align: center;
+	background-image: url("../images/share/icon/icon_small-arrow.svg");
+	background-repeat: no-repeat;
+	background-position: calc(var(--select-width) - var(--icon-width) - 12px);
+	background-size: var(--icon-width) 7px;
+	border: 0;
+
+	&:focus {
+		outline-color: var(--color-dark-gray);
+	}
+}
+
+.pagination-button:disabled + .pagenation-text {
+	color: var(--color-medium-gray);
+}
